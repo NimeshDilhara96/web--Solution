@@ -1,28 +1,29 @@
 import React from 'react';
+import heroImage from '../assets/hero.png';
 
 /* ─── Design tokens (from source HTML) ─── */
 const C = {
-  ink:     '#15142B',
-  mute:    '#6B7280',
-  paper:   '#EEF0F4',
-  white:   '#ffffff',
-  v50:     '#F1EFFE',
-  v100:    '#E4E0FD',
-  v500:    '#5B4FE0',
-  v600:    '#4D3FD6',
-  v700:    '#4234B8',
+  ink: '#15142B',
+  mute: '#6B7280',
+  paper: '#EEF0F4',
+  white: '#ffffff',
+  v50: '#F1EFFE',
+  v100: '#E4E0FD',
+  v500: '#5B4FE0',
+  v600: '#4D3FD6',
+  v700: '#4234B8',
 };
 
 const F = {
   display: "'Plus Jakarta Sans', sans-serif",
-  body:    "'Inter', sans-serif",
+  body: "'Inter', sans-serif",
 };
 
 /* ─── Marquee items ─── */
 const MARQUEE = [
-  'Full-Stack Development','AI Solutions','UI/UX Design',
-  'Enterprise Systems','MERN Stack','Cloud Infrastructure',
-  'SaaS Products','Scalable Architecture',
+  'Full-Stack Development', 'AI Solutions', 'UI/UX Design',
+  'Enterprise Systems', 'MERN Stack', 'Cloud Infrastructure',
+  'SaaS Products', 'Scalable Architecture',
 ];
 
 /* ─── Star SVG ─── */
@@ -55,7 +56,7 @@ const RatingCard = ({ score, label, platform, starColor, halfStarColor }) => (
         {label}<br />{platform}
       </p>
       <div style={{ display: 'flex', alignItems: 'center', gap: '2px', marginTop: '6px' }}>
-        {[1,2,3,4].map(i => <Star key={i} color={starColor} />)}
+        {[1, 2, 3, 4].map(i => <Star key={i} color={starColor} />)}
         <Star color={halfStarColor} />
       </div>
     </div>
@@ -148,9 +149,9 @@ const Hero = () => {
                 color: C.ink,
                 margin: '0 0 24px',
               }}>
-                Build, Host, &amp; Sell<br />
-                SaaS Tools with<br />
-                Custom Domains.
+                Crafting Next-Gen<br />
+                Software &amp; AI<br />
+                Solutions.
               </h1>
 
               {/* Body */}
@@ -176,173 +177,31 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* ══ RIGHT — ORB + WINDOWS ══ */}
+            {/* ══ RIGHT — HERO GRAPHIC ══ */}
             <div style={{
               position: 'relative',
               margin: '0 auto',
               width: '100%',
-              maxWidth: '560px',
-              aspectRatio: '1 / 1',
+              maxWidth: '600px',
               animation: 'rise 0.8s 0.15s ease-out both',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}>
-
-              {/* ── Orb ── */}
-              <div style={{
-                position: 'absolute',
-                top: '4%', left: '4%', right: '4%', bottom: '4%',
-                borderRadius: '50%',
-                background: 'radial-gradient(circle at 38% 28%, #9B8CF5 0%, #6E5DEA 32%, #4634C2 62%, #2A2270 100%)',
-                boxShadow: `
-                  inset -20px -30px 60px rgba(0,0,0,0.35),
-                  inset 20px 20px 50px rgba(255,255,255,0.15),
-                  0 40px 80px -20px rgba(50,40,140,0.45)
-                `,
-              }} />
-
-              {/* ── Decorative hand shapes ── */}
-              <div style={{
-                position: 'absolute', left: '2%', bottom: '2%',
-                width: '34%', height: '20%',
-                borderRadius: '50% 50% 45% 45%',
-                transform: 'rotate(-8deg)',
-                background: 'linear-gradient(160deg, #E9B98C 0%, #D9A06F 100%)',
-                opacity: 0.95,
-              }} />
-              <div style={{
-                position: 'absolute', right: '4%', bottom: '0%',
-                width: '30%', height: '18%',
-                borderRadius: '50% 50% 45% 45%',
-                transform: 'rotate(6deg)',
-                background: 'linear-gradient(160deg, #E9B98C 0%, #D9A06F 100%)',
-                opacity: 0.95,
-              }} />
-
-              {/* ────────────────────────────────
-                  BACK BROWSER WINDOW
-              ──────────────────────────────── */}
-              <div style={{
-                position: 'absolute', left: '8%', top: '24%',
-                width: '68%',
-                background: C.white,
-                borderRadius: '16px',
-                overflow: 'hidden',
-                border: '1px solid rgba(0,0,0,0.05)',
-                boxShadow: '0 30px 60px -15px rgba(30,20,90,0.35)',
-              }}>
-                {/* Chrome bar */}
-                <div style={{
-                  display: 'flex', alignItems: 'center', gap: '8px',
-                  padding: '10px 12px',
-                  borderBottom: '1px solid rgba(0,0,0,0.05)',
-                  background: '#F9FAFB',
-                }}>
-                  <div style={{ display: 'flex', gap: '5px', flexShrink: 0 }}>
-                    {['#F87171','#FBBF24','#34D399'].map(c => (
-                      <span key={c} style={{ width:'10px',height:'10px',borderRadius:'50%',background:c,display:'block' }}/>
-                    ))}
-                  </div>
-                  <div style={{
-                    flex: 1, background: C.white, border: '1px solid rgba(0,0,0,0.05)',
-                    borderRadius: '6px', padding: '4px 10px',
-                    fontSize: '10px', color: C.mute,
-                    overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis',
-                  }}>
-                    https://mommentx.io/developers-hub/demo
-                  </div>
-                </div>
-
-                {/* App body */}
-                <div style={{ display: 'flex' }}>
-                  {/* Sidebar */}
-                  <div style={{
-                    display: 'flex', flexDirection: 'column', gap: '12px',
-                    alignItems: 'center', padding: '16px 10px',
-                    borderRight: '1px solid rgba(0,0,0,0.05)',
-                    background: 'rgba(249,250,251,0.6)',
-                    flexShrink: 0,
-                  }}>
-                    {['#DDD6FE','#E5E7EB','#E5E7EB','#E5E7EB','#E5E7EB'].map((bg, i) => (
-                      <span key={i} style={{ width:'16px',height:'16px',borderRadius:'4px',background:bg,display:'block' }}/>
-                    ))}
-                  </div>
-
-                  {/* Main panel */}
-                  <div style={{ flex: 1, padding: '14px' }}>
-                    <p style={{ fontSize: '12px', fontWeight: 700, color: C.ink, margin: '0 0 2px', fontFamily: F.display }}>MommentX Tools</p>
-                    <p style={{ fontSize: '10.5px', color: C.mute, margin: '0 0 8px' }}>Hi, Adam! (Developer Hub)</p>
-
-                    {/* Search */}
-                    <div style={{
-                      display: 'flex', alignItems: 'center', gap: '6px',
-                      background: '#F9FAFB', border: '1px solid rgba(0,0,0,0.05)',
-                      borderRadius: '6px', padding: '6px 8px', marginBottom: '12px',
-                    }}>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                        <circle cx="11" cy="11" r="7" stroke={C.mute} strokeWidth="2"/>
-                        <path d="M21 21l-4.3-4.3" stroke={C.mute} strokeWidth="2" strokeLinecap="round"/>
-                      </svg>
-                      <span style={{ fontSize: '9.5px', color: 'rgba(107,114,128,0.7)' }}>Search</span>
-                    </div>
-
-                    {/* Tool grid */}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-                      <ToolGridCard name="Favicon Generator" domain="custom.favicon.com" badge="Beta" badgeBg="#EDE9FE" badgeColor="#5B21B6" stat="12.5k Uses" />
-                      <ToolGridCard name="Image Compressor" domain="optimize.images.io" badge="Live" badgeBg="#D1FAE5" badgeColor="#065F46" stat="5.1m Processed" />
-                      <ToolGridCard name="SEO Tool" domain="seo.analyser.com" badge="Beta" badgeBg="#FFEDD5" badgeColor="#9A3412" stat="250 Sites" fullWidth />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* ────────────────────────────────
-                  FRONT FLOATING PANEL
-              ──────────────────────────────── */}
-              <div style={{
-                position: 'absolute', right: '0%', top: '16%',
-                width: '44%',
-                background: C.white,
-                borderRadius: '16px',
-                padding: '14px',
-                border: '1px solid rgba(0,0,0,0.05)',
-                boxShadow: '0 25px 50px -12px rgba(30,20,90,0.4)',
-              }}>
-                {/* Panel header */}
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                      <path d="M4 6h16M4 12h16M4 18h16" stroke="rgba(21,20,43,0.7)" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                    <span style={{ fontSize: '11px', fontWeight: 700, color: C.ink, fontFamily: F.display }}>MommentX Tools</span>
-                  </div>
-                  <span style={{ width:'20px',height:'20px',borderRadius:'50%',background:'#E5E7EB',display:'block' }}/>
-                </div>
-
-                {/* Greeting */}
-                <p style={{ fontSize: '10px', fontWeight: 600, margin: '0 0 1px', color: C.ink }}>
-                  Hi, <span style={{ fontWeight: 700 }}>Adam!</span>
-                </p>
-                <p style={{ fontSize: '9px', color: C.mute, margin: '0 0 10px' }}>(Developer Hub)</p>
-
-                {/* Search */}
-                <div style={{
-                  display: 'flex', alignItems: 'center', gap: '6px',
-                  background: '#F9FAFB', border: '1px solid rgba(0,0,0,0.05)',
-                  borderRadius: '6px', padding: '6px 8px', marginBottom: '12px',
-                }}>
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                    <circle cx="11" cy="11" r="7" stroke={C.mute} strokeWidth="2"/>
-                    <path d="M21 21l-4.3-4.3" stroke={C.mute} strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                  <span style={{ fontSize: '9px', color: 'rgba(107,114,128,0.7)' }}>Search</span>
-                </div>
-
-                {/* Tool list */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <ToolRow name="Favicon Generator" domain="custom.favicon.com" badge="Beta" badgeBg="#EDE9FE" badgeColor="#5B21B6" stat="12.5k Uses" divider />
-                  <ToolRow name="Image Compressor" domain="optimize.images.io" badge="Live" badgeBg="#D1FAE5" badgeColor="#065F46" stat="5.1m Processed" divider />
-                  <ToolRow name="SEO Tool" domain="seo.analyser.com" badge="Beta" badgeBg="#FFEDD5" badgeColor="#9A3412" stat="250 Sites" divider={false} />
-                </div>
-              </div>
+              <img
+                src={heroImage}
+                alt="MommentX Platform"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  objectFit: 'contain'
+                }}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = 'https://placehold.co/600x600/e4e0fd/4234b8?text=Place+hero-graphic.png\\nin+public+folder';
+                }}
+              />
             </div>
             {/* end right */}
           </div>
