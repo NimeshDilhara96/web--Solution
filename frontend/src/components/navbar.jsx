@@ -8,8 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
-      
-      const sections = ['home', 'services', 'portfolio', 'about', 'contact'];
+      const sections = ['home', 'expertise', 'saas', 'why-us', 'contact'];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -18,77 +17,87 @@ const Navbar = () => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
+  const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+    if (el) { el.scrollIntoView({ behavior: 'smooth' }); setIsMenuOpen(false); }
   };
 
   const navLinks = [
-    { label: 'Home', id: 'home' },
-    { label: 'Services', id: 'services' },
-    { label: 'Portfolio', id: 'portfolio' },
-    { label: 'About', id: 'about' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Services',     id: 'expertise' },
+    { label: 'SaaS Products', id: 'saas' },
+    { label: 'About',        id: 'why-us' },
+    { label: 'Contact',      id: 'contact' },
   ];
 
   return (
-    <nav className={isScrolled ? 'scrolled' : ''}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <div className="logo" onClick={() => scrollToSection('home')}>
-          MOMMENTX<span className="logo-dot"></span>
+        {/* Logo — Blanka font, preserved exactly as original */}
+        <div
+          onClick={() => scrollTo('home')}
+          style={{
+            fontFamily: "'Blanka', sans-serif",
+            fontWeight: 400,
+            fontSize: '26px',
+            letterSpacing: '-0.02em',
+            cursor: 'pointer',
+            color: '#0a0d14',
+            userSelect: 'none',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          MOMMENTX
+          <span style={{
+            display: 'inline-block',
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            background: '#0a0d14',
+            verticalAlign: 'super',
+            marginLeft: '2px',
+          }} />
         </div>
 
+        {/* Desktop links */}
         <div className="nav-links">
           {navLinks.map((link) => (
             <span
               key={link.id}
               className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
-              data-section={link.id}
-              onClick={() => scrollToSection(link.id)}
+              onClick={() => scrollTo(link.id)}
             >
               {link.label}
             </span>
           ))}
-          <button
-            className="btn btn-primary btn-sm"
-            onClick={() => scrollToSection('contact')}
-          >
+          <button className="btn btn-primary btn-sm" onClick={() => scrollTo('contact')}>
             Start a Project
           </button>
         </div>
 
+        {/* Hamburger */}
         <button
           className={`hamburger ${isMenuOpen ? 'open' : ''}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Menu"
+          aria-label="Toggle menu"
         >
-          <span></span><span></span><span></span>
+          <span /><span /><span />
         </button>
       </div>
 
+      {/* Mobile menu */}
       {isMenuOpen && (
-        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu">
           {navLinks.map((link) => (
-            <span
-              key={link.id}
-              className="nav-link"
-              onClick={() => scrollToSection(link.id)}
-            >
+            <span key={link.id} className="nav-link" onClick={() => scrollTo(link.id)}>
               {link.label}
             </span>
           ))}
-          <button
-            className="btn btn-primary"
-            onClick={() => scrollToSection('contact')}
-          >
+          <button className="btn btn-primary" onClick={() => scrollTo('contact')}>
             Start a Project
           </button>
         </div>

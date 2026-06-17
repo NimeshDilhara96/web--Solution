@@ -1,48 +1,118 @@
 import React from 'react';
 
 const Footer = () => {
-  const scrollToSection = (id) => {
+  const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const columns = [
+    {
+      label: 'Services',
+      links: [
+        { text: 'Full-Stack Development', id: 'expertise' },
+        { text: 'AI Solutions', id: 'expertise' },
+        { text: 'UI/UX Design', id: 'expertise' },
+        { text: 'Enterprise Systems', id: 'expertise' },
+      ],
+    },
+    {
+      label: 'SaaS Products',
+      links: [
+        { text: 'FaviconForge', id: 'saas' },
+        { text: 'PixelShrink', id: 'saas' },
+        { text: 'FormCraft', id: 'saas' },
+        { text: 'CodeSnap', id: 'saas' },
+        { text: 'LinkVault', id: 'saas' },
+      ],
+    },
+    {
+      label: 'Company',
+      links: [
+        { text: 'About Us', id: 'why-us' },
+        { text: 'Our Work', id: 'expertise' },
+        { text: 'Contact', id: 'contact' },
+      ],
+    },
+  ];
+
+  const socials = [
+    { label: 'Li', title: 'LinkedIn', href: '#' },
+    { label: 'Gh', title: 'GitHub', href: '#' },
+    { label: 'Be', title: 'Behance', href: '#' },
+    { label: 'In', title: 'Instagram', href: '#' },
+  ];
 
   return (
     <footer>
       <div className="footer-inner">
-        <div className="footer-grid">
+        {/* Top grid */}
+        <div className="footer-top">
+          {/* Brand column */}
           <div>
-            <div className="footer-brand">MOMMENTX</div>
-            <p className="footer-desc">Software solutions for modern businesses. Web development, design, and digital strategy from Colombo, Sri Lanka.</p>
+            {/* Logo — Blanka font, preserved exactly as original */}
+            <div style={{
+              fontFamily: "'Blanka', sans-serif",
+              fontWeight: 400,
+              fontSize: '32px',
+              letterSpacing: '-0.02em',
+              color: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '14px',
+              userSelect: 'none',
+            }}>
+              MOMMENTX
+              <span style={{
+                display: 'inline-block',
+                width: '6px',
+                height: '6px',
+                borderRadius: '50%',
+                background: '#ffffff',
+                verticalAlign: 'super',
+                marginLeft: '2px',
+              }} />
+            </div>
+            <p className="footer-tagline">
+              Software solutions and SaaS products for forward-thinking businesses.
+              Engineering excellence from Colombo, Sri Lanka.
+            </p>
+            {/* Socials */}
+            <div className="footer-social">
+              {socials.map((s) => (
+                <a key={s.title} href={s.href} className="footer-social-btn" title={s.title} aria-label={s.title}>
+                  <span style={{ fontSize: '11px', fontWeight: 700 }}>{s.label}</span>
+                </a>
+              ))}
+            </div>
           </div>
-          <div>
-            <div className="footer-col-label">Services</div>
-            {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Backend APIs', 'SEO'].map((service, idx) => (
-              <a key={idx} onClick={() => scrollToSection('services')} className="footer-link">{service}</a>
-            ))}
-          </div>
-          <div>
-            <div className="footer-col-label">Company</div>
-            {[
-              { label: 'About', id: 'about' },
-              { label: 'Portfolio', id: 'portfolio' },
-              { label: 'Process', id: 'process-section' },
-              { label: 'Contact', id: 'contact' },
-            ].map((item, idx) => (
-              <a key={idx} onClick={() => scrollToSection(item.id)} className="footer-link">{item.label}</a>
-            ))}
-          </div>
-          <div>
-            <div className="footer-col-label">Connect</div>
-            {['LinkedIn', 'Behance', 'GitHub', 'Instagram'].map((social, idx) => (
-              <a key={idx} href="#" className="footer-link">{social}</a>
-            ))}
-          </div>
+
+          {/* Nav columns */}
+          {columns.map((col) => (
+            <div key={col.label}>
+              <div className="footer-col-label">{col.label}</div>
+              {col.links.map((link) => (
+                <a
+                  key={link.text}
+                  className="footer-link"
+                  onClick={() => scrollTo(link.id)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {link.text}
+                </a>
+              ))}
+            </div>
+          ))}
         </div>
+
+        {/* Bottom bar */}
         <div className="footer-bottom">
-          <div className="footer-copy">© 2025 MommentX. All rights reserved.</div>
-          <div className="footer-copy">Crafted in Colombo, Sri Lanka 🇱🇰</div>
+          <span className="footer-copy">© 2026 MommentX. All rights reserved.</span>
+          <span className="footer-copy">Crafted with precision in Colombo, Sri Lanka 🇱🇰</span>
+          <span className="footer-copy" style={{ display: 'flex', gap: '20px' }}>
+            <a href="#" style={{ color: '#3d4555', transition: 'color 0.2s' }}>Privacy Policy</a>
+            <a href="#" style={{ color: '#3d4555', transition: 'color 0.2s' }}>Terms of Service</a>
+          </span>
         </div>
       </div>
     </footer>
@@ -50,4 +120,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
