@@ -126,18 +126,13 @@ const Hero = () => {
   return (
     <>
       <section id="home" style={{ background: C.paper, fontFamily: F.body, WebkitFontSmoothing: 'antialiased' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 40px 96px' }}>
+        <div className="hero-container-inner" style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 40px 96px' }}>
 
           {/* ════ HERO GRID ════ */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '64px',
-            alignItems: 'center',
-          }}>
+          <div className="hero-main-grid">
 
             {/* ══ LEFT ══ */}
-            <div style={{ animation: 'rise 0.8s ease-out both' }}>
+            <div className="hero-left-col" style={{ animation: 'rise 0.8s ease-out both' }}>
 
               {/* Headline */}
               <h1 style={{
@@ -165,7 +160,7 @@ const Hero = () => {
               </p>
 
               {/* Rating cards */}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '0' }}>
+              <div className="hero-rating-cards" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '0' }}>
                 <RatingCard
                   score="4.9" label="Review" platform="on Product Hunt"
                   starColor="#FBBF24" halfStarColor="rgba(251,191,36,0.5)"
