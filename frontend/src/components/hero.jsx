@@ -63,57 +63,6 @@ const RatingCard = ({ score, label, platform, starColor, halfStarColor }) => (
   </div>
 );
 
-/* ─── Tool row inside browser / float panel ─── */
-const ToolRow = ({ name, domain, badge, badgeBg, badgeColor, stat, divider }) => (
-  <>
-    <div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <p style={{ fontSize: '10px', fontWeight: 700, margin: 0, color: C.ink }}>{name}</p>
-        <span style={{
-          fontSize: '7.5px', fontWeight: 600,
-          background: badgeBg, color: badgeColor,
-          borderRadius: '4px', padding: '1px 6px',
-        }}>{badge}</span>
-      </div>
-      <p style={{ fontSize: '8.5px', color: C.mute, margin: '2px 0 0' }}>{domain}</p>
-      <p style={{ fontSize: '8.5px', color: 'rgba(107,114,128,0.8)', margin: '4px 0 0' }}>↗ {stat}</p>
-      <div style={{
-        marginTop: '6px', textAlign: 'center',
-        fontSize: '8.5px', fontWeight: 600, color: C.ink,
-        background: '#F9FAFB', border: '1px solid rgba(0,0,0,0.05)',
-        borderRadius: '6px', padding: '4px 0',
-      }}>Manage Now</div>
-    </div>
-    {divider && <div style={{ height: '1px', background: 'rgba(0,0,0,0.05)', margin: '2px 0' }} />}
-  </>
-);
-
-/* ─── Tool card (2-col grid inside browser) ─── */
-const ToolGridCard = ({ name, domain, badge, badgeBg, badgeColor, stat, fullWidth }) => (
-  <div style={{
-    border: '1px solid rgba(0,0,0,0.05)',
-    borderRadius: '8px', padding: '8px',
-    gridColumn: fullWidth ? 'span 2' : 'span 1',
-  }}>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2px' }}>
-      <p style={{ fontSize: '10px', fontWeight: 700, margin: 0, color: C.ink }}>{name}</p>
-      <span style={{
-        fontSize: '7.5px', fontWeight: 600,
-        background: badgeBg, color: badgeColor,
-        borderRadius: '4px', padding: '1px 4px',
-      }}>{badge}</span>
-    </div>
-    <p style={{ fontSize: '8.5px', color: C.mute, margin: '2px 0' }}>{domain}</p>
-    <p style={{ fontSize: '8.5px', color: 'rgba(107,114,128,0.8)', margin: '4px 0' }}>↗ {stat}</p>
-    <div style={{
-      textAlign: 'center', fontSize: '8.5px', fontWeight: 600, color: C.ink,
-      background: '#F9FAFB', border: '1px solid rgba(0,0,0,0.05)',
-      borderRadius: '6px', padding: '4px 0',
-      width: fullWidth ? '50%' : '100%',
-    }}>Manage Now</div>
-  </div>
-);
-
 /* ════════════════════════════════════════════
    HERO COMPONENT
 ════════════════════════════════════════════ */
@@ -126,7 +75,8 @@ const Hero = () => {
   return (
     <>
       <section id="home" style={{ background: C.paper, fontFamily: F.body, WebkitFontSmoothing: 'antialiased' }}>
-        <div className="hero-container-inner" style={{ maxWidth: '1280px', margin: '0 auto', padding: '24px 40px 96px' }}>
+        {/* hero-container-inner: padding handled by CSS media queries via the class */}
+        <div className="hero-container-inner">
 
           {/* ════ HERO GRID ════ */}
           <div className="hero-main-grid">
@@ -140,9 +90,9 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.025em',
                 lineHeight: 1.06,
-                fontSize: 'clamp(36px, 4.5vw, 54px)',
+                fontSize: 'clamp(30px, 5vw, 54px)',
                 color: C.ink,
-                margin: '0 0 24px',
+                margin: '0 0 20px',
               }}>
                 Crafting Next-Gen<br />
                 Software &amp; AI<br />
@@ -151,8 +101,8 @@ const Hero = () => {
 
               {/* Body */}
               <p style={{
-                color: C.mute, fontSize: '17px', lineHeight: 1.65,
-                maxWidth: '420px', margin: '0 0 36px',
+                color: C.mute, fontSize: 'clamp(15px, 2vw, 17px)', lineHeight: 1.65,
+                maxWidth: '420px', margin: '0 0 32px',
               }}>
                 MommentX provides professional, custom-domain tech tools
                 and scalable SaaS platforms. We build trusted digital solutions
@@ -160,7 +110,7 @@ const Hero = () => {
               </p>
 
               {/* Rating cards */}
-              <div className="hero-rating-cards" style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginBottom: '0' }}>
+              <div className="hero-rating-cards" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '0' }}>
                 <RatingCard
                   score="4.9" label="Review" platform="on Product Hunt"
                   starColor="#FBBF24" halfStarColor="rgba(251,191,36,0.5)"
@@ -173,7 +123,7 @@ const Hero = () => {
             </div>
 
             {/* ══ RIGHT — HERO GRAPHIC ══ */}
-            <div style={{
+            <div className="hero-right-col" style={{
               position: 'relative',
               margin: '0 auto',
               width: '100%',
@@ -190,7 +140,8 @@ const Hero = () => {
                   width: '100%',
                   height: 'auto',
                   display: 'block',
-                  objectFit: 'contain'
+                  objectFit: 'contain',
+                  maxHeight: '480px',
                 }}
                 onError={(e) => {
                   e.target.onerror = null;
@@ -202,13 +153,7 @@ const Hero = () => {
           </div>
 
           {/* ════ LOGO CLOUD ════ */}
-          <div style={{
-            marginTop: '96px',
-            display: 'flex', flexWrap: 'wrap',
-            alignItems: 'center', justifyContent: 'center',
-            gap: '24px 48px',
-            opacity: 0.7,
-          }}>
+          <div className="hero-logo-cloud">
             {[
               { text: 'StackExchange', sup: '⤴' },
               { text: 'GENERAL ASSEMBLY', prefix: true },
@@ -220,7 +165,7 @@ const Hero = () => {
               <span key={text} style={{
                 fontFamily: F.display,
                 fontWeight: prefix ? 800 : 700,
-                fontSize: prefix ? '15px' : '17px',
+                fontSize: prefix ? '14px' : '16px',
                 display: 'flex', alignItems: 'center', gap: '6px',
                 fontStyle: italic ? 'italic' : 'normal',
                 textTransform: lower ? 'lowercase' : 'none',

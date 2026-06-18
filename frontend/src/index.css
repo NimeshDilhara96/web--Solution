@@ -4,6 +4,7 @@
    MOMMENTX — DESIGN SYSTEM (Light Mode, Premium SaaS)
    ============================================================ */
 
+/* stylelint-disable-next-line at-rule-no-unknown */
 @theme {
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
@@ -457,13 +458,39 @@ a {
    HERO
    ============================================================ */
 #home {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 120px 5vw 80px;
   position: relative;
   overflow: hidden;
+}
+
+.hero-container-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 40px 96px;
+}
+
+.hero-logo-cloud {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 40px;
+  opacity: 0.7;
+}
+
+.hero-right-col {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-grid-bg {
@@ -516,6 +543,12 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
+}
+
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hero-eyebrow {
@@ -769,7 +802,7 @@ a {
 /* ============================================================
    EXPERTISE / SERVICES
    ============================================================ */
-#expertise {}
+/* #expertise styles are inherited from child selectors below */
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -848,7 +881,7 @@ a {
 /* ============================================================
    SAAS ECOSYSTEM
    ============================================================ */
-#saas {}
+/* #saas styles are inherited from child selectors below */
 .saas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -925,7 +958,7 @@ a {
 /* ============================================================
    WHY US
    ============================================================ */
-#why-us {}
+/* #why-us styles are inherited from child selectors below */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1018,7 +1051,7 @@ a {
 /* ============================================================
    CONTACT
    ============================================================ */
-#contact {}
+/* #contact styles are inherited from child selectors below */
 .contact-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -1270,28 +1303,50 @@ footer {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
-  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-  .hero-main-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-  .hero-left-col { display: flex; flex-direction: column; align-items: center; }
-  .hero-left-col p { margin: 0 auto 36px !important; }
+  /* ── Hero ── */
+  #home { padding: 100px 5vw 60px; }
+  .hero-container-inner { padding: 0 !important; }
+  .hero-main-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero-left-col {
+    align-items: center;
+  }
+  .hero-left-col h1 { text-align: center; }
+  .hero-left-col p  { margin-left: auto !important; margin-right: auto !important; text-align: center; }
   .hero-rating-cards { justify-content: center !important; }
-  .hero-container-inner { padding: 24px 5vw 64px !important; }
-  
-  .hero-visual-panel { order: -1; min-height: 380px !important; }
+  .hero-right-col { order: -1; max-width: 440px !important; }
+  .hero-right-col img { max-height: 320px !important; }
+  .hero-logo-cloud { margin-top: 56px; gap: 16px 32px; }
   .hero-sub { max-width: 100%; }
+  .hero-visual-panel { order: -1; min-height: 320px !important; }
 
+  /* ── Other sections ── */
   .saas-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid  { grid-template-columns: repeat(2, 1fr); }
   .why-metrics { grid-template-columns: repeat(3, 1fr); padding: 36px 32px; }
-
   .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 
 @media (max-width: 600px) {
-  .section-wrapper, .section-wrapper-soft { padding: 72px 5vw; }
+  .section-wrapper, .section-wrapper-soft { padding: 64px 5vw; }
 
+  /* ── Hero ── */
+  #home { padding: 88px 5vw 48px; min-height: unset; }
+  .hero-main-grid { gap: 28px; }
+  .hero-right-col img { max-height: 240px !important; }
+  .hero-logo-cloud {
+    margin-top: 40px;
+    gap: 14px 24px;
+    opacity: 0.65;
+  }
+  .hero-logo-cloud span { font-size: 13px !important; }
+  .hero-rating-cards { gap: 10px !important; }
+
+  /* ── Other sections ── */
   .expertise-grid { grid-template-columns: 1fr; }
   .saas-grid     { grid-template-columns: 1fr; }
   .why-grid      { grid-template-columns: 1fr; }
@@ -1309,4 +1364,7 @@ footer {
 
   .hero-stats { gap: 20px; }
   .hero-stat-divider { display: none; }
+
+  /* ── Marquee ── */
+  .marquee-text { font-size: 11px; }
 }
