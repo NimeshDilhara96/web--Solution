@@ -10,10 +10,7 @@ const Services = () => {
     { icon: '🤝', title: 'Digital Strategy', desc: 'From ideation to launch and beyond. Strategic consulting to align your digital presence with business goals.', tags: ['Roadmapping', 'Consulting'] },
   ];
 
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+
 
   return (
     <section id="services">

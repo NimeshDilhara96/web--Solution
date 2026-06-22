@@ -1,17 +1,17 @@
-import React from 'react';
-import heroImage from '../assets/hero.png';
+import React from "react";
+import heroImage from "../assets/hero.png";
 
 /* ─── Design tokens (from source HTML) ─── */
 const C = {
-  ink: '#15142B',
-  mute: '#6B7280',
-  paper: '#EEF0F4',
-  white: '#ffffff',
-  v50: '#F1EFFE',
-  v100: '#E4E0FD',
-  v500: '#5B4FE0',
-  v600: '#4D3FD6',
-  v700: '#4234B8',
+  ink: "#15142B",
+  mute: "#6B7280",
+  paper: "#EEF0F4",
+  white: "#ffffff",
+  v50: "#F1EFFE",
+  v100: "#E4E0FD",
+  v500: "#5B4FE0",
+  v600: "#4D3FD6",
+  v700: "#4234B8",
 };
 
 const F = {
@@ -21,9 +21,14 @@ const F = {
 
 /* ─── Marquee items ─── */
 const MARQUEE = [
-  'Full-Stack Development', 'AI Solutions', 'UI/UX Design',
-  'Enterprise Systems', 'MERN Stack', 'Cloud Infrastructure',
-  'SaaS Products', 'Scalable Architecture',
+  "Full-Stack Development",
+  "AI Solutions",
+  "UI/UX Design",
+  "Enterprise Systems",
+  "MERN Stack",
+  "Cloud Infrastructure",
+  "SaaS Products",
+  "Scalable Architecture",
 ];
 
 /* ─── Star SVG ─── */
@@ -38,25 +43,59 @@ const Star = ({ color }) => (
 
 /* ─── Rating card ─── */
 const RatingCard = ({ score, label, platform, starColor, halfStarColor }) => (
-  <div style={{
-    background: C.white, borderRadius: '16px',
-    border: '1px solid rgba(0,0,0,0.06)',
-    boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
-    padding: '14px 16px',
-    display: 'flex', alignItems: 'center', gap: '14px',
-  }}>
-    <div style={{
-      background: '#F3F4F6', borderRadius: '12px',
-      padding: '8px 12px',
-      fontFamily: F.display, fontWeight: 800,
-      fontSize: '20px', lineHeight: 1, color: C.ink,
-    }}>{score}</div>
+  <div
+    style={{
+      background: C.white,
+      borderRadius: "16px",
+      border: "1px solid rgba(0,0,0,0.06)",
+      boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+      padding: "14px 16px",
+      display: "flex",
+      alignItems: "center",
+      gap: "14px",
+      width: "240px",
+      boxSizing: "border-box",
+    }}
+  >
+    <div
+      style={{
+        background: "#F3F4F6",
+        borderRadius: "12px",
+        padding: "8px 12px",
+        fontFamily: F.display,
+        fontWeight: 800,
+        fontSize: "20px",
+        lineHeight: 1,
+        color: C.ink,
+      }}
+    >
+      {score}
+    </div>
     <div>
-      <p style={{ fontSize: '13.5px', fontWeight: 600, lineHeight: 1.3, color: C.ink, margin: 0 }}>
-        {label}<br />{platform}
+      <p
+        style={{
+          fontSize: "13.5px",
+          fontWeight: 600,
+          lineHeight: 1.3,
+          color: C.ink,
+          margin: 0,
+        }}
+      >
+        {label}
+        <br />
+        {platform}
       </p>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '2px', marginTop: '6px' }}>
-        {[1, 2, 3, 4].map(i => <Star key={i} color={starColor} />)}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "2px",
+          marginTop: "6px",
+        }}
+      >
+        {[1, 2, 3, 4].map((i) => (
+          <Star key={i} color={starColor} />
+        ))}
         <Star color={halfStarColor} />
       </div>
     </div>
@@ -67,121 +106,118 @@ const RatingCard = ({ score, label, platform, starColor, halfStarColor }) => (
    HERO COMPONENT
 ════════════════════════════════════════════ */
 const Hero = () => {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <>
-      <section id="home" style={{ background: C.paper, fontFamily: F.body, WebkitFontSmoothing: 'antialiased' }}>
+      <section
+        id="home"
+        style={{
+          background: C.paper,
+          fontFamily: F.body,
+          WebkitFontSmoothing: "antialiased",
+        }}
+      >
         {/* hero-container-inner: padding handled by CSS media queries via the class */}
         <div className="hero-container-inner">
-
           {/* ════ HERO GRID ════ */}
           <div className="hero-main-grid">
-
             {/* ══ LEFT ══ */}
-            <div className="hero-left-col" style={{ animation: 'rise 0.8s ease-out both' }}>
-
+            <div
+              className="hero-left-col"
+              style={{ animation: "rise 0.8s ease-out both" }}
+            >
               {/* Headline */}
-              <h1 style={{
-                fontFamily: F.display,
-                fontWeight: 800,
-                letterSpacing: '-0.025em',
-                lineHeight: 1.06,
-                fontSize: 'clamp(30px, 5vw, 54px)',
-                color: C.ink,
-                margin: '0 0 20px',
-              }}>
-                Crafting Next-Gen<br />
-                Software &amp; AI<br />
+              <h1
+                style={{
+                  fontFamily: F.display,
+                  fontWeight: 800,
+                  letterSpacing: "-0.025em",
+                  lineHeight: 1.06,
+                  fontSize: "clamp(30px, 5vw, 54px)",
+                  color: C.ink,
+                  margin: "0 0 20px",
+                }}
+              >
+                Crafting Next-Gen
+                <br />
+                Software &amp; AI
+                <br />
                 Solutions.
               </h1>
 
               {/* Body */}
-              <p style={{
-                color: C.mute, fontSize: 'clamp(15px, 2vw, 17px)', lineHeight: 1.65,
-                maxWidth: '420px', margin: '0 0 32px',
-              }}>
-                MommentX provides professional, custom-domain tech tools
-                and scalable SaaS platforms. We build trusted digital solutions
-                to empower your business from vision to market.
+              <p
+                style={{
+                  color: C.mute,
+                  fontSize: "clamp(15px, 2vw, 17px)",
+                  lineHeight: 1.65,
+                  maxWidth: "420px",
+                  margin: "0 0 32px",
+                }}
+              >
+                MommentX provides professional, custom-domain tech tools and
+                scalable SaaS platforms. We build trusted digital solutions to
+                empower your business from vision to market.
               </p>
 
               {/* Rating cards */}
-              <div className="hero-rating-cards" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginBottom: '0' }}>
+              <div
+                className="hero-rating-cards"
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "14px",
+                  marginBottom: "0",
+                }}
+              >
                 <RatingCard
-                  score="4.9" label="Review" platform="on Product Hunt"
-                  starColor="#FBBF24" halfStarColor="rgba(251,191,36,0.5)"
+                  score="4.9"
+                  label="Review"
+                  platform="on Product Hunt"
+                  starColor="#FBBF24"
+                  halfStarColor="rgba(251,191,36,0.5)"
                 />
                 <RatingCard
-                  score="4.8" label="Review" platform="on Trustpilot"
-                  starColor="#10B981" halfStarColor="rgba(16,185,129,0.5)"
+                  score="4.8"
+                  label="Review"
+                  platform="on Trustpilot"
+                  starColor="#10B981"
+                  halfStarColor="rgba(16,185,129,0.5)"
                 />
               </div>
             </div>
 
             {/* ══ RIGHT — HERO GRAPHIC ══ */}
-            <div className="hero-right-col" style={{
-              position: 'relative',
-              margin: '0 auto',
-              width: '100%',
-              maxWidth: '600px',
-              animation: 'rise 0.8s 0.15s ease-out both',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
+            <div
+              className="hero-right-col"
+              style={{
+                position: "relative",
+                margin: "0 auto",
+                width: "100%",
+                maxWidth: "600px",
+                animation: "rise 0.8s 0.15s ease-out both",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <img
                 src={heroImage}
                 alt="MommentX Platform"
                 style={{
-                  width: '100%',
-                  height: 'auto',
-                  display: 'block',
-                  objectFit: 'contain',
-                  maxHeight: '480px',
+                  width: "100%",
+                  height: "auto",
+                  display: "block",
+                  objectFit: "contain",
+                  maxHeight: "480px",
                 }}
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = 'https://placehold.co/600x600/e4e0fd/4234b8?text=Place+hero-graphic.png\\nin+public+folder';
+                  e.target.src =
+                    "https://placehold.co/600x600/e4e0fd/4234b8?text=Place+hero-graphic.png\\nin+public+folder";
                 }}
               />
             </div>
             {/* end right */}
-          </div>
-
-          {/* ════ LOGO CLOUD ════ */}
-          <div className="hero-logo-cloud">
-            {[
-              { text: 'StackExchange', sup: '⤴' },
-              { text: 'GENERAL ASSEMBLY', prefix: true },
-              { text: 'Lyft', italic: true },
-              { text: 'Climb' },
-              { text: '⚑ Fountain' },
-              { text: '⌁ instacart', lower: true },
-            ].map(({ text, sup, prefix, italic, lower }) => (
-              <span key={text} style={{
-                fontFamily: F.display,
-                fontWeight: prefix ? 800 : 700,
-                fontSize: prefix ? '14px' : '16px',
-                display: 'flex', alignItems: 'center', gap: '6px',
-                fontStyle: italic ? 'italic' : 'normal',
-                textTransform: lower ? 'lowercase' : 'none',
-                color: C.ink,
-              }}>
-                {prefix && (
-                  <span style={{
-                    width: '20px', height: '20px', borderRadius: '50%',
-                    background: 'rgba(21,20,43,0.8)',
-                    display: 'inline-block',
-                  }} />
-                )}
-                {text}
-                {sup && <sup style={{ fontSize: '9px' }}>{sup}</sup>}
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -189,11 +225,13 @@ const Hero = () => {
       {/* ─── MARQUEE BAND ─── */}
       <div className="marquee-band" aria-hidden="true">
         <div className="marquee-track">
-          {[0, 1].map(rep => (
+          {[0, 1].map((rep) => (
             <div key={rep} className="marquee-item">
               {MARQUEE.map((item, i) => (
                 <React.Fragment key={i}>
-                  <span className={`marquee-text ${i % 2 === 1 ? 'dim' : ''}`}>{item}</span>
+                  <span className={`marquee-text ${i % 2 === 1 ? "dim" : ""}`}>
+                    {item}
+                  </span>
                   <span className="marquee-dot" />
                 </React.Fragment>
               ))}
