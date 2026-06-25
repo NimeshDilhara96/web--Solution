@@ -853,7 +853,7 @@ const ERP = () => {
                 </div>
                 <div className="erp-contact-info-text">
                   <h4>{t.contactEmailLabel}</h4>
-                  <p>momentx@gmail.com</p>
+                  <p>mommentx@gmail.com</p>
                 </div>
               </div>
             </div>
