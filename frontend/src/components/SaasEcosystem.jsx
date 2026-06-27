@@ -6,11 +6,12 @@ const saasProducts = [
     emoji: "",
     name: "Small Business  Multitenant Order Management System",
     tagline: "Order Management System for Small Businesses",
-    desc: "Manage orders ,customers,Products,inventory,and reports.",
+    desc: "Manage orders, customers, products, inventory, and reports — all in one powerful platform.",
     status: "live",
-    statusLabel: "Live",
+    statusLabel: "🟢 Live",
     color: "#eff6ff",
-    href: "/erp",
+    href: "https://fb-whatsapp-business-erp-system.vercel.app",
+    internalHref: "/erp",
   },
 ];
 
@@ -77,28 +78,49 @@ const SaasEcosystem = () => {
 
               {/* Footer */}
               <div className="saas-card-footer">
-                <button
-                  className="saas-try-btn"
-                  disabled={product.status === "soon"}
-                  style={{
-                    opacity: product.status === "soon" ? 0.45 : 1,
-                    cursor:
-                      product.status === "soon" ? "not-allowed" : "pointer",
-                  }}
-                >
-                  {product.status === "soon" ? "Coming Soon" : "Try Now"}
-                  {product.status !== "soon" && (
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path
-                        d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  )}
-                </button>
+                {product.status === "soon" ? (
+                  <button
+                    className="saas-try-btn"
+                    disabled
+                    style={{ opacity: 0.45, cursor: "not-allowed" }}
+                  >
+                    Coming Soon
+                  </button>
+                ) : (
+                  <>
+                    <a
+                      className="saas-try-btn"
+                      href={product.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Open App
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path
+                          d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      className="saas-learn-btn"
+                      href={product.internalHref}
+                      style={{
+                        fontSize: "13px",
+                        color: "#9ba3b4",
+                        textDecoration: "none",
+                        marginLeft: "12px",
+                        fontWeight: 500,
+                      }}
+                    >
+                      Learn More →
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           ))}

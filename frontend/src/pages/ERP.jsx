@@ -31,6 +31,7 @@ import {
   FileText,
   Settings,
   ChevronUp,
+  ExternalLink,
 } from "lucide-react";
 import "./erp.css";
 
@@ -78,13 +79,13 @@ const translations = {
     navCta: "Get Started",
 
     // Hero
-    heroBadge: "Built for Sri Lankan Businesses",
+    heroBadge: "🚀 Now Live — Built for Sri Lankan Businesses",
     heroTitle1: "Manage Your Business Orders",
     heroTitle2: "Smarter & Faster",
     heroSub:
       "Stop losing WhatsApp and Facebook orders. OrderFlow ERP brings all your orders, customers, and inventory into one powerful system — so nothing falls through the cracks.",
-    heroBtn1: "Get Started",
-    heroBtn2: "View Demo",
+    heroBtn1: "Start Free Now",
+    heroBtn2: "Open Dashboard",
 
     // Problem
     problemLabel: "The Problem",
@@ -195,12 +196,12 @@ const translations = {
       },
     ],
 
-    // Coming Soon
+    // Live Now
     comingSoonTitle:
-      "This platform is coming soon for small business owners in Sri Lanka",
+      "OrderFlow ERP is now live for small business owners in Sri Lanka!",
     comingSoonSub:
-      "Be among the first to transform how you manage your business. Join the waitlist today.",
-    comingSoonBtn: "Join the Waitlist",
+      "Start managing your orders, customers, and inventory today — completely free to get started. No credit card required.",
+    comingSoonBtn: "Launch App Now",
 
     // Contact
     contactLabel: "Contact Us",
@@ -229,13 +230,13 @@ const translations = {
     navCta: "ආරම්භ කරන්න",
 
     // Hero
-    heroBadge: "ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා නිර්මාණය කළ",
+    heroBadge: "🚀 දැන් Live — ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා නිර්මාණය කළ",
     heroTitle1: "ඔබේ ව්‍යාපාරයේ orders",
     heroTitle2: "smart ලෙස manage කරන්න",
     heroSub:
       "WhatsApp සහ Facebook orders මඟ හැරෙනවාද? OrderFlow ERP මඟින් ඔබේ සියලුම orders, customers සහ inventory එක system එකකට ගෙනත් කිසිම දෙයක් මඟ නොහැරෙන බව සහතික කරයි.",
-    heroBtn1: "ආරම්භ කරන්න",
-    heroBtn2: "Demo බලන්න",
+    heroBtn1: "දැන්ම නොමිලේ ආරම්භ කරන්න",
+    heroBtn2: "Dashboard විවෘත කරන්න",
 
     // Problem
     problemLabel: "ගැටලුව",
@@ -346,12 +347,12 @@ const translations = {
       },
     ],
 
-    // Coming Soon
+    // Live Now
     comingSoonTitle:
-      "මෙම platform එක ඉක්මනින් ශ්‍රී ලංකාවේ කුඩා ව්‍යාපාරිකයින්ට ලබා දෙනවා",
+      "OrderFlow ERP දැන් ශ්‍රී ලංකාවේ කුඩා ව්‍යාපාරිකයින්ට live!",
     comingSoonSub:
-      "ඔබේ ව්‍යාපාරය manage කරන ආකාරය වෙනස් කරන පළමු අය අතරට එන්න. අද waitlist එකට එකතු වන්න.",
-    comingSoonBtn: "Waitlist එකට එකතු වන්න",
+      "ඔබේ orders, customers සහ inventory අද සිටම manage කරන්න — ආරම්භ කිරීම සම්පූර්ණයෙන්ම නොමිලේ. Credit card අවශ්‍ය නැහැ.",
+    comingSoonBtn: "App එක විවෘත කරන්න",
 
     // Contact
     contactLabel: "සම්බන්ධ වන්න",
@@ -382,6 +383,111 @@ const ERP = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const t = translations[lang];
+
+  /* ---- SEO: dynamic meta tags & structured data ---- */
+  useEffect(() => {
+    const seo = {
+      en: {
+        title:
+          "OrderFlow ERP — Order Management System for Sri Lankan Businesses",
+        description:
+          "Stop losing WhatsApp and Facebook orders. OrderFlow ERP helps small businesses in Sri Lanka manage orders, customers, inventory, and sales reports in one powerful platform.",
+        keywords:
+          "ERP Sri Lanka, order management system, WhatsApp order tracking, Facebook order management, small business ERP, inventory management Sri Lanka, COD tracking, sales reports, OrderFlow",
+      },
+      si: {
+        title:
+          "OrderFlow ERP — ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා Order Management System",
+        description:
+          "WhatsApp සහ Facebook orders මඟ හැරීම නවත්වන්න. OrderFlow ERP මඟින් orders, customers, inventory, sales reports එක platform එකකින් manage කරන්න.",
+        keywords:
+          "ERP ශ්‍රී ලංකා, order management, WhatsApp order tracking, Facebook orders, small business ERP, inventory management, OrderFlow",
+      },
+    };
+
+    const { title, description, keywords } = seo[lang] || seo.en;
+    const url = "https://fb-whatsapp-business-erp-system.vercel.app/erp";
+
+    // Title
+    document.title = title;
+
+    // Helper to set or create a meta tag
+    const setMeta = (attr, key, content) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+
+    // Standard meta
+    setMeta("name", "description", description);
+    setMeta("name", "keywords", keywords);
+    setMeta("name", "author", "OrderFlow ERP");
+    setMeta("name", "robots", "index, follow");
+
+    // Open Graph
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:url", url);
+    setMeta("property", "og:title", title);
+    setMeta("property", "og:description", description);
+    setMeta("property", "og:site_name", "OrderFlow ERP");
+    setMeta("property", "og:locale", lang === "si" ? "si_LK" : "en_US");
+
+    // Twitter Card
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:title", title);
+    setMeta("name", "twitter:description", description);
+
+    // Canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", url);
+
+    // Language
+    document.documentElement.lang = lang === "si" ? "si" : "en";
+
+    // JSON-LD structured data
+    const ldId = "erp-jsonld";
+    let ldScript = document.getElementById(ldId);
+    if (!ldScript) {
+      ldScript = document.createElement("script");
+      ldScript.id = ldId;
+      ldScript.type = "application/ld+json";
+      document.head.appendChild(ldScript);
+    }
+    ldScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "OrderFlow ERP",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: "https://fb-whatsapp-business-erp-system.vercel.app",
+      description: seo.en.description,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "LKR",
+        availability: "https://schema.org/InStock",
+      },
+      author: {
+        "@type": "Organization",
+        name: "OrderFlow",
+      },
+    });
+
+    return () => {
+      // Clean up JSON-LD on unmount
+      const el = document.getElementById(ldId);
+      if (el) el.remove();
+    };
+  }, [lang]);
 
   /* ---- Scroll listener for sticky nav ---- */
   useEffect(() => {
@@ -514,12 +620,15 @@ const ERP = () => {
               >
                 {darkMode ? <Sun size={18} /> : <Moon size={18} />}
               </button>
-              <button
+              <a
                 className="erp-nav-cta"
-                onClick={() => scrollTo("erp-contact")}
+                href="https://fb-whatsapp-business-erp-system.vercel.app/register"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
               >
                 {t.navCta}
-              </button>
+              </a>
               {/* Hamburger (mobile) */}
               <button
                 className={`erp-hamburger ${mobileMenu ? "open" : ""}`}
@@ -597,15 +706,22 @@ const ERP = () => {
             </h1>
             <p className="erp-hero-sub">{t.heroSub}</p>
             <div className="erp-hero-buttons">
-              <button
+              <a
                 className="erp-btn-primary"
-                onClick={() => scrollTo("erp-contact")}
+                href="https://fb-whatsapp-business-erp-system.vercel.app/register"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {t.heroBtn1} <ArrowRight size={18} />
-              </button>
-              <button className="erp-btn-outline">
-                <Play size={18} /> {t.heroBtn2}
-              </button>
+              </a>
+              <a
+                className="erp-btn-outline"
+                href="https://fb-whatsapp-business-erp-system.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ExternalLink size={18} /> {t.heroBtn2}
+              </a>
             </div>
           </div>
         </div>
@@ -696,7 +812,7 @@ const ERP = () => {
                 <div className="erp-dash-topbar-dot yellow" />
                 <div className="erp-dash-topbar-dot green" />
                 <div className="erp-dash-topbar-url">
-                  app.orderflow.lk/dashboard
+                  fb-whatsapp-business-erp-system.vercel.app
                 </div>
               </div>
             </div>
@@ -798,17 +914,20 @@ const ERP = () => {
         </div>
       </section>
 
-      {/* =============== COMING SOON =============== */}
+      {/* =============== LIVE NOW CTA =============== */}
       <section className="erp-coming-soon" id="erp-coming-soon">
         <div className="erp-coming-soon-content erp-animate">
           <h2>{t.comingSoonTitle}</h2>
           <p>{t.comingSoonSub}</p>
-          <button
-            className="erp-btn-outline"
-            onClick={() => scrollTo("erp-contact")}
+          <a
+            className="erp-btn-primary"
+            href="https://fb-whatsapp-business-erp-system.vercel.app/register"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-flex", textDecoration: "none" }}
           >
-            {t.comingSoonBtn} <ArrowRight size={18} />
-          </button>
+            {t.comingSoonBtn} <ExternalLink size={18} />
+          </a>
         </div>
       </section>
 
