@@ -14,17 +14,38 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email) {
       alert('Please fill in all required fields');
       return;
     }
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', project: '', message: '' });
-    }, 5000);
+    setSubmitting(true);
+    try {
+      await fetch('https://formsubmit.co/ajax/mommentx@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          project: formData.project,
+          message: formData.message,
+          _subject: 'New Contact — Web Solution',
+          _template: 'table',
+        }),
+      });
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', project: '', message: '' });
+      }, 5000);
+    } catch {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactInfoItems = [
@@ -146,11 +167,13 @@ const Contact = () => {
                   />
                 </div>
 
-                <button className="btn btn-primary btn-full" type="submit" style={{ marginTop: '4px' }}>
-                  Send Message
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <button className="btn btn-primary btn-full" type="submit" disabled={submitting} style={{ marginTop: '4px', opacity: submitting ? 0.7 : 1 }}>
+                  {submitting ? 'Sending...' : 'Send Message'}
+                  {!submitting && (
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
                 </button>
                 <p className="form-note">We respect your privacy. No spam, ever.</p>
               </form>

@@ -946,19 +946,29 @@ const ERP = () => {
             {/* Form */}
             <form
               className="erp-contact-form"
-              onSubmit={(e) => e.preventDefault()}
+              action="https://formsubmit.co/mommentx@gmail.com"
+              method="POST"
             >
+              {/* FormSubmit config */}
+              <input type="hidden" name="_subject" value="New ERP Contact — OrderFlow" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://fb-whatsapp-business-erp-system.vercel.app/erp" />
+              <input type="text" name="_honey" style={{ display: "none" }} />
+
               <input
                 type="text"
+                name="name"
                 placeholder={t.contactNamePlaceholder}
                 required
               />
               <input
                 type="email"
+                name="email"
                 placeholder={t.contactEmailPlaceholder}
                 required
               />
-              <textarea placeholder={t.contactMsgPlaceholder} required />
+              <textarea name="message" placeholder={t.contactMsgPlaceholder} required />
               <button type="submit" className="erp-btn-primary">
                 <Send size={18} /> {t.contactSendBtn}
               </button>
