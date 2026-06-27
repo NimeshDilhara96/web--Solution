@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const saasProducts = [
   {
@@ -9,7 +10,7 @@ const saasProducts = [
     status: "live",
     statusLabel: "Live",
     color: "#eff6ff",
-    href: "https://www.mommentx.space/erp",
+    href: "/erp",
   },
 ];
 
