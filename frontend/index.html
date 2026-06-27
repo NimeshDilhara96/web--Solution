@@ -1,32 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MommentX – Software Solutions & SaaS Ecosystem</title>
-    <meta name="description" content="MommentX is a premium software solutions company specializing in Full-Stack Development, AI Solutions, UI/UX Design, and Custom Enterprise Systems — plus an in-house suite of powerful SaaS tools." />
-    <meta name="keywords" content="software solutions, MERN development, AI solutions, SaaS products, enterprise systems, UI/UX design, React, Next.js, Colombo, Sri Lanka" />
-    <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="MommentX – Software Solutions & SaaS Ecosystem" />
-    <meta property="og:description" content="Premium software engineering and in-house SaaS products that power modern businesses." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mommentx.com" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MommentX – Software Solutions" />
-    <meta name="twitter:description" content="Engineering cutting-edge digital solutions and SaaS tools." />
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://mommentx.com" />
-
-    <!-- Fonts -->
+    <!-- ⚡ Performance: DNS Prefetch & Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- 🚀 Critical Path Rendering: Minimal inline styles -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background: #eef0f4;
+      }
+      #root {
+        min-height: 100vh;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+
+    <!-- 🎨 Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet" />
+
+    <!-- 📱 Favicons & Web App Manifest -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/mx/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/mx/favicon.svg" />
+    <link rel="shortcut icon" href="/mx/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/mx/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="MommentX" />
+    <link rel="manifest" href="/mx/site.webmanifest" />
+
+    <!-- 🏷️ SEO & Metadata -->
+    <title>MommentX – Software Solutions & SaaS Ecosystem</title>
+    <link rel="canonical" href="https://mommentx.space/" />
+    <meta
+      name="description"
+      content="MommentX is a premium software solutions company specializing in Full-Stack Development, AI Solutions, UI/UX Design, and Custom Enterprise Systems — plus an in-house suite of powerful SaaS tools."
+    />
+    <meta
+      name="keywords"
+      content="MommentX, software solutions, MERN development, AI solutions, SaaS products, enterprise systems, UI/UX design, React, Next.js, Colombo, Sri Lanka, custom software development, custom ERP development, SaaS tools, enterprise CRM, web development agency"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="author" content="MommentX" />
+    <meta name="creator" content="Nimesh Dilhara Kulasooriya" />
+    <meta name="theme-color" content="#5B4FE0" />
+    <meta name="application-name" content="MommentX Ecosystem" />
+
+    <!-- 🌐 Search Console Verification -->
+    <meta
+      name="google-site-verification"
+      content="MPKtElHbSG4pCpKJqhAXIDSqeu1FfaagHWVTPWr4daM"
+    />
+
+    <!-- 📢 Open Graph (Facebook / LinkedIn) -->
+    <meta
+      property="og:title"
+      content="MommentX – Software Solutions & SaaS Ecosystem"
+    />
+    <meta
+      property="og:description"
+      content="Premium software engineering and in-house SaaS products that power modern businesses."
+    />
+    <meta
+      property="og:image"
+      content="https://mommentx.space/mx/web-app-manifest-512x512.png"
+    />
+    <meta property="og:image:alt" content="MommentX Software Solutions Logo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mommentx.space/" />
+
+    <!-- 🐦 Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MommentX – Software Solutions & SaaS Ecosystem"
+    />
+    <meta
+      name="twitter:description"
+      content="Engineering cutting-edge digital solutions and SaaS tools."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mommentx.space/mx/web-app-manifest-512x512.png"
+    />
+    <meta name="twitter:image:alt" content="MommentX Software Solutions Logo" />
+
+    <!-- 💡 Structured Data: ORGANIZATION Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://mommentx.space/#organization",
+        "name": "MommentX",
+        "url": "https://mommentx.space/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mommentx.space/mx/favicon-96x96.png"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://mommentx.space/mx/web-app-manifest-512x512.png"
+        },
+        "description": "MommentX is a premium software solutions company specializing in Full-Stack Development, AI Solutions, UI/UX Design, and Custom Enterprise Systems — plus an in-house suite of powerful SaaS tools.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Colombo",
+          "addressCountry": "Sri Lanka"
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://nimeshdilhara.vercel.app/#person",
+          "name": "Nimesh Dilhara Kulasooriya",
+          "givenName": "Nimesh",
+          "familyName": "Kulasooriya",
+          "url": "https://nimeshdilhara.vercel.app/"
+        },
+        "sameAs": [
+          "https://github.com/nimeshdilhara96",
+          "https://www.linkedin.com/in/nimeshdilhara"
+        ]
+      }
+    </script>
+
+    <!-- 💡 Structured Data: WEBSITE Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mommentx.space/#website",
+        "name": "MommentX",
+        "url": "https://mommentx.space/",
+        "publisher": {
+          "@id": "https://mommentx.space/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://mommentx.space/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "hasPart": [
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Services",
+            "url": "https://mommentx.space/#expertise"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "SaaS Products",
+            "url": "https://mommentx.space/#saas"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "About Us",
+            "url": "https://mommentx.space/#why-us"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "ERP Page",
+            "url": "https://mommentx.space/erp"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "name": "Contact",
+            "url": "https://mommentx.space/#contact"
+          }
+        ]
+      }
+    </script>
+
+    <!-- 💡 Structured Data: WEBPAGE Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://mommentx.space/#webpage",
+        "url": "https://mommentx.space/",
+        "name": "MommentX – Software Solutions & SaaS Ecosystem",
+        "isPartOf": {
+          "@id": "https://mommentx.space/#website"
+        },
+        "description": "MommentX is a premium software solutions company specializing in Full-Stack Development, AI Solutions, UI/UX Design, and Custom Enterprise Systems."
+      }
+    </script>
+
+    <!-- 💡 Structured Data: SERVICE Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Bespoke Enterprise Software & AI Development",
+        "provider": {
+          "@id": "https://mommentx.space/#organization"
+        },
+        "serviceType": "Software Engineering & SaaS Solutions",
+        "description": "Full-Stack Development, Custom ERP Systems, AI-powered Web Apps, and custom Enterprise Systems built to optimize business scaling.",
+        "areaServed": [
+          "Worldwide",
+          "United States",
+          "United Kingdom",
+          "Canada",
+          "Australia",
+          "Europe",
+          "Sri Lanka"
+        ],
+        "availableLanguage": ["English"]
+      }
+    </script>
+
+    <!-- 💡 Structured Data: FAQ PAGE Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does MommentX offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MommentX specializes in custom software solutions including Full-Stack Development, AI Integration, UI/UX Design, custom Enterprise Systems, and dedicated SaaS products like our cloud ERP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you develop custom ERP and CRM solutions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we design and build tailor-made enterprise software, CRM platforms, and scalable ERP systems tailored to specific business operations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we schedule a consultation for our software project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! You can reach out via our contact form in the 'Start a Project' section to discuss your vision and schedule a detailed consultation."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
