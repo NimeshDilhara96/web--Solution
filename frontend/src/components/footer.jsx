@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollTo = (id) => {
@@ -129,12 +130,12 @@ const Footer = () => {
             className="footer-copy"
             style={{ display: "flex", gap: "20px" }}
           >
-            <a href="#" style={{ color: "#3d4555", transition: "color 0.2s" }}>
+            <Link to="/privacy-policy" style={{ color: "#3d4555", transition: "color 0.2s", textDecoration: "none" }}>
               Privacy Policy
-            </a>
-            <a href="#" style={{ color: "#3d4555", transition: "color 0.2s" }}>
+            </Link>
+            <Link to="/terms-of-service" style={{ color: "#3d4555", transition: "color 0.2s", textDecoration: "none" }}>
               Terms of Service
-            </a>
+            </Link>
           </span>
         </div>
       </div>
