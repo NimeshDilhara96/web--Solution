@@ -382,6 +382,10 @@ const ERP = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const t = translations[lang];
 
   /* ---- SEO: dynamic meta tags & structured data ---- */
