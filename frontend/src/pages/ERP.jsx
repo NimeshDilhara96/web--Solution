@@ -410,7 +410,7 @@ const ERP = () => {
     };
 
     const { title, description, keywords } = seo[lang] || seo.en;
-    const url = "https://fb-whatsapp-business-erp-system.vercel.app/erp";
+    const url = "https://orderflow.mommentx.space/erp";
 
     // Title
     document.title = title;
@@ -472,7 +472,7 @@ const ERP = () => {
       name: "OrderFlow ERP",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      url: "https://fb-whatsapp-business-erp-system.vercel.app",
+      url: "https://orderflow.mommentx.space",
       description: seo.en.description,
       offers: {
         "@type": "Offer",
@@ -626,8 +626,7 @@ const ERP = () => {
               </button>
               <a
                 className="erp-nav-cta"
-                href="https://fb-whatsapp-business-erp-system.vercel.app/register"
-                target="_blank"
+                href="https://orderflow.mommentx.space/register"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
               >
@@ -712,7 +711,7 @@ const ERP = () => {
             <div className="erp-hero-buttons">
               <a
                 className="erp-btn-primary"
-                href="https://fb-whatsapp-business-erp-system.vercel.app/register"
+                href="https://orderflow.mommentx.space/register"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -720,7 +719,7 @@ const ERP = () => {
               </a>
               <a
                 className="erp-btn-outline"
-                href="https://fb-whatsapp-business-erp-system.vercel.app"
+                href="https://orderflow.mommentx.space"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -816,7 +815,7 @@ const ERP = () => {
                 <div className="erp-dash-topbar-dot yellow" />
                 <div className="erp-dash-topbar-dot green" />
                 <div className="erp-dash-topbar-url">
-                  fb-whatsapp-business-erp-system.vercel.app
+                  orderflow.mommentx.space
                 </div>
               </div>
             </div>
@@ -925,8 +924,7 @@ const ERP = () => {
           <p>{t.comingSoonSub}</p>
           <a
             className="erp-btn-primary"
-            href="https://fb-whatsapp-business-erp-system.vercel.app/register"
-            target="_blank"
+            href="https://orderflow.mommentx.space/register"
             rel="noopener noreferrer"
             style={{ display: "inline-flex", textDecoration: "none" }}
           >
@@ -954,10 +952,18 @@ const ERP = () => {
               method="POST"
             >
               {/* FormSubmit config */}
-              <input type="hidden" name="_subject" value="New ERP Contact — OrderFlow" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New ERP Contact — OrderFlow"
+              />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://fb-whatsapp-business-erp-system.vercel.app/erp" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://mommentx.space/"
+              />
               <input type="text" name="_honey" style={{ display: "none" }} />
 
               <input
@@ -972,7 +978,11 @@ const ERP = () => {
                 placeholder={t.contactEmailPlaceholder}
                 required
               />
-              <textarea name="message" placeholder={t.contactMsgPlaceholder} required />
+              <textarea
+                name="message"
+                placeholder={t.contactMsgPlaceholder}
+                required
+              />
               <button type="submit" className="erp-btn-primary">
                 <Send size={18} /> {t.contactSendBtn}
               </button>
