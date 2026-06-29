@@ -1009,12 +1009,31 @@ const ERP = () => {
         <div className="erp-container">
           <div className="erp-footer-inner">
             <div className="erp-footer-brand">
-              <div className="erp-nav-logo" style={{ cursor: "default" }}>
-                <div className="erp-nav-logo-icon">O</div>
-                OrderFlow{" "}
-                <span style={{ fontWeight: 400, opacity: 0.6, marginLeft: 4 }}>
-                  ERP
-                </span>
+              <div
+                style={{
+                  fontFamily: "'Blanka', sans-serif",
+                  fontWeight: 400,
+                  fontSize: "32px",
+                  letterSpacing: "-0.02em",
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: "14px",
+                  userSelect: "none",
+                  cursor: "default",
+                }}
+              >
+                MOMMENTX
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    background: "currentColor",
+                    verticalAlign: "super",
+                    marginLeft: "2px",
+                  }}
+                />
               </div>
               <div className="erp-footer-tagline">{t.footerTagline}</div>
             </div>
