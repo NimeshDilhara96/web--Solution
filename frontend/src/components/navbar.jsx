@@ -53,8 +53,8 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "Services", id: "expertise" },
-    { label: "SaaS Products", id: "saas" },
-    { label: "About", id: "why-us" },
+    { label: "Products", id: "saas" },
+    { label: "Case Studies", id: "why-us" },
   ];
 
   return (

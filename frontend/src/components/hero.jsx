@@ -137,11 +137,11 @@ const Hero = () => {
                   margin: "0 0 20px",
                 }}
               >
-                Crafting Next-Gen
+                Building Scalable
                 <br />
-                Software &amp; AI
+                Digital Products &amp;
                 <br />
-                Solutions.
+                Business Automation.
               </h1>
 
               {/* Body */}
@@ -154,9 +154,7 @@ const Hero = () => {
                   margin: "0 0 32px",
                 }}
               >
-                MommentX provides professional, custom-domain tech tools and
-                scalable SaaS platforms. We build trusted digital solutions to
-                empower your business from vision to market.
+                MommentX is a global software development company delivering custom software, scalable SaaS platforms, and intelligent automation. We solve complex problems to help businesses worldwide scale, innovate, and thrive.
               </p>
 
               {/* Rating cards */}
