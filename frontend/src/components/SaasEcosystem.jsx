@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const saasProducts = [
   {
-    emoji: "",
-    name: "Small Business  Multitenant Order Management System",
-    tagline: "Order Management System for Small Businesses",
-    desc: "Manage orders, customers, products, inventory, and reports — all in one powerful platform.",
+    emoji: "📦",
+    name: "OrderFlow ERP",
+    tagline: "Multi-Channel Order & Inventory Management",
+    desc: "Solve the chaos of multi-channel selling with centralized order management, real-time inventory tracking, and seamless business automation.",
     status: "live",
     statusLabel: "🟢 Live",
     color: "#eff6ff",
@@ -33,9 +33,8 @@ const SaasEcosystem = () => {
             <span className="gradient-text">Used Worldwide.</span>
           </h2>
           <p className="section-desc">
-            Beyond client work, we build our own suite of developer and
-            productivity tools. Thoughtfully crafted, obsessively refined — and
-            ready for you to try today.
+            Beyond client work, we build our own suite of enterprise-grade SaaS products. 
+            Thoughtfully crafted to solve complex operational challenges and automate business workflows globally.
           </p>
         </div>
 

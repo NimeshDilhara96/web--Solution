@@ -11,27 +11,25 @@ const Footer = () => {
     {
       label: "Services",
       links: [
-        { text: "Full-Stack Development", id: "expertise" },
-        { text: "AI Solutions", id: "expertise" },
-        { text: "UI/UX Design", id: "expertise" },
-        { text: "Enterprise Systems", id: "expertise" },
+        { text: "Web Applications", id: "expertise" },
+        { text: "AI & Automation", id: "expertise" },
+        { text: "ERP Systems", id: "expertise" },
+        { text: "E-commerce", id: "expertise" },
       ],
     },
     {
-      label: "SaaS Products",
+      label: "Products",
       links: [
-        { text: "FaviconForge", id: "saas" },
-        { text: "PixelShrink", id: "saas" },
-        { text: "FormCraft", id: "saas" },
-        { text: "CodeSnap", id: "saas" },
-        { text: "LinkVault", id: "saas" },
+        { text: "OrderFlow ERP", id: "saas" },
+        { text: "HRM System", id: "why-us" },
+        { text: "NutriCare AI", id: "why-us" },
       ],
     },
     {
       label: "Company",
       links: [
-        { text: "About Us", id: "why-us" },
-        { text: "Our Work", id: "expertise" },
+        { text: "Services", id: "expertise" },
+        { text: "Case Studies", id: "why-us" },
         { text: "Contact", id: "contact" },
       ],
     },
@@ -79,8 +77,8 @@ const Footer = () => {
               />
             </div>
             <p className="footer-tagline">
-              Software solutions and SaaS products for forward-thinking
-              businesses. Engineering excellence from Colombo, Sri Lanka.
+              Custom software solutions and scalable SaaS products for global enterprises. 
+              Engineering excellence delivering real business value worldwide.
             </p>
             {/* Socials */}
             <div className="footer-social">
@@ -124,7 +122,7 @@ const Footer = () => {
             © 2026 MommentX. All rights reserved.
           </span>
           <span className="footer-copy">
-            Crafted with precision in Colombo, Sri Lanka 🇱🇰
+            Empowering businesses globally 🌎
           </span>
           <span
             className="footer-copy"
