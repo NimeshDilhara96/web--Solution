@@ -10,7 +10,7 @@ const saasProducts = [
     status: "live",
     statusLabel: "🟢 Live",
     color: "#eff6ff",
-    href: "https://fb-whatsapp-business-erp-system.vercel.app",
+    href: "https://www.mommentx.space/erp",
     internalHref: "/erp",
   },
 ];
@@ -96,7 +96,12 @@ const SaasEcosystem = () => {
                       style={{ textDecoration: "none" }}
                     >
                       Open App
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
                         <path
                           d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5"
                           stroke="currentColor"
