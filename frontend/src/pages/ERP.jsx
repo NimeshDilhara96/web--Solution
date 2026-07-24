@@ -33,6 +33,7 @@ import {
   ChevronUp,
   ExternalLink,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import "./erp.css";
 
 /* Inline SVG social icons (removed from recent lucide-react) */
@@ -410,50 +411,7 @@ const ERP = () => {
     };
 
     const { title, description, keywords } = seo[lang] || seo.en;
-    const url = "https://orderflow.mommentx.space/erp";
-
-    // Title
-    document.title = title;
-
-    // Helper to set or create a meta tag
-    const setMeta = (attr, key, content) => {
-      let el = document.querySelector(`meta[${attr}="${key}"]`);
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute(attr, key);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
-    };
-
-    // Standard meta
-    setMeta("name", "description", description);
-    setMeta("name", "keywords", keywords);
-    setMeta("name", "author", "OrderFlow ERP");
-    setMeta("name", "robots", "index, follow");
-
-    // Open Graph
-    setMeta("property", "og:type", "website");
-    setMeta("property", "og:url", url);
-    setMeta("property", "og:title", title);
-    setMeta("property", "og:description", description);
-    setMeta("property", "og:site_name", "OrderFlow ERP");
-    setMeta("property", "og:locale", lang === "si" ? "si_LK" : "en_US");
-
-    // Twitter Card
-    setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:title", title);
-    setMeta("name", "twitter:description", description);
-
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute("href", url);
-
+    // We now use Helmet in the render method for Meta tags
     // Language
     document.documentElement.lang = lang === "si" ? "si" : "en";
 
@@ -578,8 +536,58 @@ const ERP = () => {
     TrendingDown,
   ];
 
+  const seoData = {
+    en: {
+      title: "OrderFlow ERP — Order Management System for Sri Lankan Businesses",
+      description: "Stop losing WhatsApp and Facebook orders. OrderFlow ERP helps small businesses in Sri Lanka manage orders, customers, inventory, and sales reports in one powerful platform.",
+      keywords: "ERP Sri Lanka, order management system, WhatsApp order tracking, Facebook order management, small business ERP, inventory management Sri Lanka, COD tracking, sales reports, OrderFlow",
+    },
+    si: {
+      title: "OrderFlow ERP — ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා Order Management System",
+      description: "WhatsApp සහ Facebook orders මඟ හැරීම නවත්වන්න. OrderFlow ERP මඟින් orders, customers, inventory, sales reports එක platform එකකින් manage කරන්න.",
+      keywords: "ERP ශ්‍රී ලංකා, order management, WhatsApp order tracking, Facebook orders, small business ERP, inventory management, OrderFlow",
+    },
+  };
+  const currentSeo = seoData[lang] || seoData.en;
+  const pageUrl = "https://orderflow.mommentx.space/erp";
+
   return (
     <div className={`erp-page ${darkMode ? "erp-dark" : ""}`}>
+      <Helmet>
+        <title>{currentSeo.title}</title>
+        <meta name="description" content={currentSeo.description} />
+        <meta name="keywords" content={currentSeo.keywords} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={currentSeo.title} />
+        <meta property="og:description" content={currentSeo.description} />
+        <meta property="og:locale" content={lang === "si" ? "si_LK" : "en_US"} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={currentSeo.title} />
+        <meta name="twitter:description" content={currentSeo.description} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "OrderFlow ERP",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://orderflow.mommentx.space",
+            description: currentSeo.description,
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "LKR",
+              availability: "https://schema.org/InStock",
+            },
+            author: {
+              "@type": "Organization",
+              name: "OrderFlow",
+            },
+          })}
+        </script>
+      </Helmet>
       {/* =============== NAVBAR =============== */}
       <nav className={`erp-nav ${scrolled ? "erp-nav-scrolled" : ""}`}>
         <div className="erp-container">
