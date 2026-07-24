@@ -1,29 +1,44 @@
 import React from 'react';
 
-const reasons = [
+const caseStudies = [
   {
-    emoji: '🏗️',
-    title: 'Clean Architecture',
-    desc: 'Every project follows SOLID principles, modular design patterns, and clean separation of concerns. Code that future teams can actually maintain and extend.',
-    points: ['SOLID & DRY principles', 'Modular, testable code', 'Comprehensive documentation'],
+    emoji: '📦',
+    title: 'OrderFlow ERP',
+    desc: 'An all-in-one business management platform designed to automate multi-channel retail operations.',
+    points: [
+      'Problem: Manual order tracking & lost sales',
+      'Solution: Centralized inventory & order ERP',
+      'Tech: React, Node.js, PostgreSQL',
+      'Result: 300% faster order fulfillment'
+    ],
   },
   {
-    emoji: '📈',
-    title: 'Scalable Solutions',
-    desc: 'We build for where you\'re going, not just where you are. Our systems handle load spikes, evolving requirements, and growth from MVP to enterprise — without rewrites.',
-    points: ['Horizontal & vertical scaling', 'Microservices architecture', 'Performance-first mindset'],
+    emoji: '👥',
+    title: 'Global HRM System',
+    desc: 'A comprehensive human resource management solution for multinational enterprise teams.',
+    points: [
+      'Problem: Fragmented HR data & compliance risks',
+      'Solution: Unified portal with automated payroll',
+      'Tech: Next.js, Python, AWS',
+      'Result: Reduced payroll processing time by 80%'
+    ],
   },
   {
-    emoji: '⚡',
-    title: 'Modern Tech Stacks',
-    desc: 'We invest in proven, cutting-edge technologies. React, Node.js, Python, AWS, Docker, and Kubernetes — chosen for your project\'s needs, not familiarity.',
-    points: ['Latest proven frameworks', 'Cloud-native deployments', 'DevOps & CI/CD pipelines'],
+    emoji: '🥗',
+    title: 'NutriCare AI Platform',
+    desc: 'An AI-driven nutrition and diet planning SaaS platform for healthcare professionals.',
+    points: [
+      'Problem: Inefficient manual diet planning',
+      'Solution: AI-powered meal generation engine',
+      'Tech: OpenAI API, React, Node.js',
+      'Result: Scaled to 10k+ global active users'
+    ],
   },
 ];
 
 const metrics = [
   { num: '99.9%', label: 'Average Uptime SLA' },
-  { num: '50+',   label: 'Projects Delivered' },
+  { num: '50+',   label: 'Global Projects Delivered' },
   { num: '100%',  label: 'Source Code Ownership' },
 ];
 
@@ -38,20 +53,19 @@ const WhyUs = () => {
       <div className="section-inner">
         {/* Section header */}
         <div className="section-head">
-          <div className="section-label">Why MommentX</div>
+          <div className="section-label">Case Studies</div>
           <h2 className="section-title">
-            Why Leading Teams{' '}
-            <span className="gradient-text">Choose Us</span>
+            Featured Global{' '}
+            <span className="gradient-text">Projects</span>
           </h2>
           <p className="section-desc">
-            High-paying clients don't just buy code — they buy reliability, clarity, and
-            a team they can trust to get it right the first time.
+            Real-world business problems solved through scalable technology, custom software engineering, and intelligent architecture.
           </p>
         </div>
 
         {/* 3-column cards */}
         <div className="why-grid">
-          {reasons.map((r) => (
+          {caseStudies.map((r) => (
             <div key={r.title} className="why-card">
               <div className="why-icon-wrap" style={{ fontSize: '28px' }}>
                 {r.emoji}
