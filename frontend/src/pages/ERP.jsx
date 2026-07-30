@@ -76,11 +76,12 @@ const translations = {
     navHome: "Home",
     navFeatures: "Features",
     navHowItWorks: "How it Works",
+    navChangelog: "Changelog",
     navContact: "Contact",
     navCta: "Get Started",
 
     // Hero
-    heroBadge: "🚀 Now Live — Built for Sri Lankan Businesses",
+
     heroTitle1: "Manage Your Business Orders",
     heroTitle2: "Smarter & Faster",
     heroSub:
@@ -197,12 +198,53 @@ const translations = {
       },
     ],
 
-    // Live Now
-    comingSoonTitle:
-      "OrderFlow ERP is now live for small business owners in Sri Lanka!",
+    // Architecture
+    archLabel: "System Architecture",
+    archTitle: "One Platform. Every Workflow.",
+    archSub:
+      "OrderFlow is a multi-tenant SaaS built so that every shop owner gets two powerful wings: a back-office ERP and a customer-facing Online Store — all powered by the same secure backend.",
+    archCards: [
+      {
+        color: "#63d7e0",
+        icon: "🏗️",
+        title: "One Shared Platform",
+        desc: "Every business registers as a Tenant on the OrderFlow Platform. Your data is fully isolated — secure, private, and yours alone.",
+      },
+      {
+        color: "#f2d449",
+        icon: "⚡",
+        title: "Two Powerful Workflows",
+        desc: "Your team uses the ERP side to manage Products, Orders, Inventory & Customers. Meanwhile, shoppers browse your Public Website, hit SEO pages, place Customer Orders, and Checkout — all in one place.",
+      },
+      {
+        color: "#b18cff",
+        icon: "🔗",
+        title: "One Unified Backend",
+        desc: "Both the ERP and the Online Store read from the same OrderFlow Backend. Stock updates instantly when an order lands from any channel — no sync, no duplicate entries.",
+      },
+    ],
+    archLegend: [
+      { color: "#f2d449", label: "Domain grouping" },
+      { color: "#63d7e0", label: "Core service" },
+      { color: "#ff6fae", label: "Customer-facing surface" },
+      { color: "#ff9d5c", label: "Storefront service" },
+      { color: "#eceef1", label: "Shared resource" },
+    ],
+
+    // Release CTA
+    comingSoonTitle: "Release v1.0.2 — Now in Public Testing",
     comingSoonSub:
-      "Start managing your orders, customers, and inventory today — completely free to get started. No credit card required.",
-    comingSoonBtn: "Launch App Now",
+      "OrderFlow ERP v1.0.2 is live for public testing. Try the full ERP dashboard — manage orders, customers, inventory, and reports. Free to use. No credit card required.",
+    comingSoonBtn: "Try v1.0.2 Now",
+    changelogTitle: "What's in v1.0.2",
+    changelog: [
+      { type: "new", text: "Products & Inventory management" },
+      { type: "new", text: "Orders & Customers module" },
+      { type: "new", text: "Reports & Analytics dashboard" },
+      { type: "new", text: "Staff & Permissions system" },
+      { type: "new", text: "COD & Payment Tracking" },
+      { type: "soon", text: "Online Storefront — coming in v2.0" },
+    ],
 
     // Contact
     contactLabel: "Contact Us",
@@ -227,11 +269,12 @@ const translations = {
     navHome: "මුල් පිටුව",
     navFeatures: "විශේෂාංග",
     navHowItWorks: "ක්‍රියාකාරිත්වය",
+    navChangelog: "Changelog",
     navContact: "සම්බන්ධ වන්න",
     navCta: "ආරම්භ කරන්න",
 
     // Hero
-    heroBadge: "🚀 දැන් Live — ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා නිර්මාණය කළ",
+    heroBadge: "🚀 Release v1.0.2 — Public Testing Live",
     heroTitle1: "ඔබේ ව්‍යාපාරයේ orders",
     heroTitle2: "smart ලෙස manage කරන්න",
     heroSub:
@@ -348,12 +391,53 @@ const translations = {
       },
     ],
 
-    // Live Now
-    comingSoonTitle:
-      "OrderFlow ERP දැන් ශ්‍රී ලංකාවේ කුඩා ව්‍යාපාරිකයින්ට live!",
+    // Architecture
+    archLabel: "System Architecture",
+    archTitle: "එක් Platform. සෑම Workflow.",
+    archSub:
+      "OrderFlow යනු multi-tenant SaaS platform එකක් — සෑම shop owner ට ERP back-office සහ Online Store යන දෙකම, එකම backend එකෙන් ලබා ගත හැකිය.",
+    archCards: [
+      {
+        color: "#63d7e0",
+        icon: "🏗️",
+        title: "එක් Platform",
+        desc: "සෑම ව්‍යාපාරයක්ම Tenant ලෙස OrderFlow Platform එකේ ලියාපදිංචි වේ. ඔබේ data සම්පූර්ණ ලෙස protected.",
+      },
+      {
+        color: "#f2d449",
+        icon: "⚡",
+        title: "Powerful Workflows දෙකක්",
+        desc: "ඔබේ team ERP side හරහා Products, Orders, Inventory & Customers manage කරයි. Customers Public Website, SEO Pages, Order & Checkout හරහා shop කරයි.",
+      },
+      {
+        color: "#b18cff",
+        icon: "🔗",
+        title: "එකම Backend",
+        desc: "ERP සහ Online Store දෙකම Same OrderFlow Backend එකෙන් data ලබා ගනී. Stock real-time update වෙනවා — duplicate entries නැහැ.",
+      },
+    ],
+    archLegend: [
+      { color: "#f2d449", label: "Domain grouping" },
+      { color: "#63d7e0", label: "Core service" },
+      { color: "#ff6fae", label: "Customer-facing surface" },
+      { color: "#ff9d5c", label: "Storefront service" },
+      { color: "#eceef1", label: "Shared resource" },
+    ],
+
+    // Release CTA
+    comingSoonTitle: "Release v1.0.2 — Public Testing Live",
     comingSoonSub:
-      "ඔබේ orders, customers සහ inventory අද සිටම manage කරන්න — ආරම්භ කිරීම සම්පූර්ණයෙන්ම නොමිලේ. Credit card අවශ්‍ය නැහැ.",
-    comingSoonBtn: "App එක විවෘත කරන්න",
+      "OrderFlow ERP v1.0.2 public testing වෙනුවෙන් live. Orders, customers, inventory සහ reports manage කරන්න. නොමිලේ. Credit card අවශ්‍ය නැහැ.",
+    comingSoonBtn: "v1.0.2 try කරන්න",
+    changelogTitle: "v1.0.2 හි අලුත් දේ",
+    changelog: [
+      { type: "new", text: "Products & Inventory management" },
+      { type: "new", text: "Orders & Customers module" },
+      { type: "new", text: "Reports & Analytics dashboard" },
+      { type: "new", text: "Staff & Permissions system" },
+      { type: "new", text: "COD & Payment Tracking" },
+      { type: "soon", text: "Online Storefront — v2.0 හි" },
+    ],
 
     // Contact
     contactLabel: "සම්බන්ධ වන්න",
@@ -498,6 +582,7 @@ const ERP = () => {
     { label: t.navHome, id: "erp-hero" },
     { label: t.navFeatures, id: "erp-features" },
     { label: t.navHowItWorks, id: "erp-solution" },
+    { label: t.navChangelog, id: "erp-coming-soon", badge: "v1.0.2" },
     { label: t.navContact, id: "erp-contact" },
   ];
 
@@ -538,14 +623,20 @@ const ERP = () => {
 
   const seoData = {
     en: {
-      title: "OrderFlow ERP — Order Management System for Sri Lankan Businesses",
-      description: "Stop losing WhatsApp and Facebook orders. OrderFlow ERP helps small businesses in Sri Lanka manage orders, customers, inventory, and sales reports in one powerful platform.",
-      keywords: "ERP Sri Lanka, order management system, WhatsApp order tracking, Facebook order management, small business ERP, inventory management Sri Lanka, COD tracking, sales reports, OrderFlow",
+      title:
+        "OrderFlow ERP — Order Management System for Sri Lankan Businesses",
+      description:
+        "Stop losing WhatsApp and Facebook orders. OrderFlow ERP helps small businesses in Sri Lanka manage orders, customers, inventory, and sales reports in one powerful platform.",
+      keywords:
+        "ERP Sri Lanka, order management system, WhatsApp order tracking, Facebook order management, small business ERP, inventory management Sri Lanka, COD tracking, sales reports, OrderFlow",
     },
     si: {
-      title: "OrderFlow ERP — ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා Order Management System",
-      description: "WhatsApp සහ Facebook orders මඟ හැරීම නවත්වන්න. OrderFlow ERP මඟින් orders, customers, inventory, sales reports එක platform එකකින් manage කරන්න.",
-      keywords: "ERP ශ්‍රී ලංකා, order management, WhatsApp order tracking, Facebook orders, small business ERP, inventory management, OrderFlow",
+      title:
+        "OrderFlow ERP — ශ්‍රී ලංකාවේ ව්‍යාපාර සඳහා Order Management System",
+      description:
+        "WhatsApp සහ Facebook orders මඟ හැරීම නවත්වන්න. OrderFlow ERP මඟින් orders, customers, inventory, sales reports එක platform එකකින් manage කරන්න.",
+      keywords:
+        "ERP ශ්‍රී ලංකා, order management, WhatsApp order tracking, Facebook orders, small business ERP, inventory management, OrderFlow",
     },
   };
   const currentSeo = seoData[lang] || seoData.en;
@@ -562,7 +653,10 @@ const ERP = () => {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={currentSeo.title} />
         <meta property="og:description" content={currentSeo.description} />
-        <meta property="og:locale" content={lang === "si" ? "si_LK" : "en_US"} />
+        <meta
+          property="og:locale"
+          content={lang === "si" ? "si_LK" : "en_US"}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={currentSeo.title} />
         <meta name="twitter:description" content={currentSeo.description} />
@@ -593,11 +687,32 @@ const ERP = () => {
         <div className="erp-container">
           <div className="erp-nav-inner">
             {/* Logo */}
-            <div className="erp-nav-logo" onClick={() => scrollTo("erp-hero")}>
+            <div
+              className="erp-nav-logo"
+              onClick={() => scrollTo("erp-hero")}
+              style={{ display: "flex", alignItems: "center", gap: "8px" }}
+            >
               <div className="erp-nav-logo-icon">O</div>
               OrderFlow{" "}
               <span style={{ fontWeight: 400, opacity: 0.6, marginLeft: 4 }}>
                 ERP
+              </span>
+              {/* v1.0.2 release pill */}
+              <span
+                style={{
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.4px",
+                  color: "#00e676",
+                  background: "rgba(0,230,118,0.12)",
+                  border: "1px solid rgba(0,230,118,0.35)",
+                  borderRadius: "5px",
+                  padding: "1px 7px",
+                  lineHeight: "18px",
+                  fontFamily: "Inter, system-ui, sans-serif",
+                }}
+              >
+                v1.0.2
               </span>
             </div>
 
@@ -608,8 +723,29 @@ const ERP = () => {
                   key={link.id}
                   className="erp-nav-link"
                   onClick={() => scrollTo(link.id)}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                  }}
                 >
                   {link.label}
+                  {link.badge && (
+                    <span
+                      style={{
+                        fontSize: "9px",
+                        fontWeight: 700,
+                        letterSpacing: "0.3px",
+                        color: "#00e676",
+                        background: "rgba(0,230,118,0.12)",
+                        border: "1px solid rgba(0,230,118,0.3)",
+                        borderRadius: "4px",
+                        padding: "1px 5px",
+                      }}
+                    >
+                      {link.badge}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
@@ -706,6 +842,41 @@ const ERP = () => {
         </div>
         <div className="erp-container">
           <div className="erp-hero-content erp-animate erp-visible">
+            {/* Release v1.0.2 announcement banner */}
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "rgba(0,230,118,0.08)",
+                border: "1px solid rgba(0,230,118,0.3)",
+                borderRadius: "100px",
+                padding: "5px 14px 5px 10px",
+                marginBottom: "12px",
+                fontSize: "12px",
+                fontWeight: 600,
+                color: "#00e676",
+                fontFamily: "Inter, system-ui, sans-serif",
+                letterSpacing: "0.2px",
+              }}
+            >
+              <span
+                style={{
+                  background: "#00e676",
+                  borderRadius: "50%",
+                  width: "7px",
+                  height: "7px",
+                  display: "inline-block",
+                  flexShrink: 0,
+                  boxShadow: "0 0 6px #00e676",
+                  animation: "erp-pulse 2s infinite",
+                }}
+              />
+              <span>🚀 Release v1.0.2 &nbsp;—&nbsp;</span>
+              <span style={{ color: "#a0c8a8", fontWeight: 500 }}>
+                ERP Operations Now Public
+              </span>
+            </div>
             <div className="erp-hero-badge">
               <span className="erp-hero-badge-dot" />
               {t.heroBadge}
@@ -895,6 +1066,1127 @@ const ERP = () => {
         </div>
       </section>
 
+      {/* =============== ARCHITECTURE / PROJECT PLAN =============== */}
+      <section className="erp-architecture" id="erp-architecture">
+        <div className="erp-architecture-bg">
+          <div className="erp-arch-glow erp-arch-glow-1" />
+          <div className="erp-arch-glow erp-arch-glow-2" />
+        </div>
+        <div className="erp-container">
+          {/* ---- Section header ---- */}
+          <div className="erp-arch-header erp-animate">
+            <span className="erp-section-label">
+              <BarChart3 size={14} /> {t.archLabel}
+            </span>
+            <h2 className="erp-section-title on-dark">{t.archTitle}</h2>
+            <p className="erp-arch-sub">{t.archSub}</p>
+          </div>
+
+          {/* ---- Explanation cards ---- */}
+          <div className="erp-arch-cards erp-animate">
+            {t.archCards.map((card, i) => (
+              <div
+                key={i}
+                className="erp-arch-card"
+                style={{ "--card-accent": card.color }}
+              >
+                <div className="erp-arch-card-icon">{card.icon}</div>
+                <h3 className="erp-arch-card-title">{card.title}</h3>
+                <p className="erp-arch-card-desc">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="erp-arch-diagram-wrap erp-animate">
+            <svg
+              className="erp-arch-svg"
+              viewBox="0 0 1200 790"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <marker
+                  id="arch-arrow"
+                  viewBox="0 0 8 8"
+                  refX="7"
+                  refY="4"
+                  markerWidth="6"
+                  markerHeight="6"
+                  orient="auto-start-reverse"
+                >
+                  <path d="M0,0.5 L7,4 L0,7.5 z" fill="#4a4a58" />
+                </marker>
+                <linearGradient
+                  id="platform-grad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#1e1e28" />
+                  <stop offset="100%" stopColor="#16161f" />
+                </linearGradient>
+                <linearGradient
+                  id="backend-grad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#0d1f1f" />
+                  <stop offset="100%" stopColor="#0a1818" />
+                </linearGradient>
+                <linearGradient
+                  id="db-grad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#14101f" />
+                  <stop offset="100%" stopColor="#0f0c18" />
+                </linearGradient>
+              </defs>
+
+              {/* ── L1: OrderFlow Platform ── */}
+              <rect
+                x="400"
+                y="20"
+                width="400"
+                height="60"
+                rx="10"
+                fill="url(#platform-grad)"
+                stroke="#3a3a4a"
+                strokeWidth="1.2"
+              />
+              <rect
+                x="400"
+                y="20"
+                width="400"
+                height="2.5"
+                rx="1.2"
+                fill="#63d7e0"
+              />
+              <text
+                x="600"
+                y="47"
+                textAnchor="middle"
+                fill="#eceef1"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="15"
+                fontWeight="700"
+                letterSpacing="-0.3"
+              >
+                OrderFlow Platform
+              </text>
+              <text
+                x="600"
+                y="64"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10.5"
+                letterSpacing="0.5"
+              >
+                SaaS Infrastructure
+              </text>
+
+              {/* connector: Platform → Multi-Tenant Core */}
+              <line
+                x1="600"
+                y1="80"
+                x2="600"
+                y2="128"
+                stroke="#3a3a4a"
+                strokeWidth="1.2"
+                strokeDasharray="4 3"
+                markerEnd="url(#arch-arrow)"
+              />
+              <rect
+                x="614"
+                y="92"
+                width="116"
+                height="18"
+                rx="4"
+                fill="#1a1a22"
+              />
+              <text
+                x="672"
+                y="104"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9.5"
+                letterSpacing="0.3"
+              >
+                Multi-Tenant Architecture
+              </text>
+
+              {/* ── L2: Multi-Tenant Core ── */}
+              <rect
+                x="360"
+                y="130"
+                width="480"
+                height="58"
+                rx="10"
+                fill="#16161f"
+                stroke="#4a4a58"
+                strokeWidth="1.2"
+              />
+              <rect
+                x="360"
+                y="130"
+                width="480"
+                height="2.5"
+                rx="1.2"
+                fill="#f2d449"
+              />
+              <text
+                x="600"
+                y="156"
+                textAnchor="middle"
+                fill="#eceef1"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="13.5"
+                fontWeight="700"
+                letterSpacing="-0.2"
+              >
+                Multi-Tenant Core
+              </text>
+              <text
+                x="600"
+                y="173"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+                letterSpacing="0.2"
+              >
+                Authentication &amp; Authorization · Tenant Isolation ·
+                Role-Based Access
+              </text>
+
+              {/* connectors: Core → ERP / Storefront */}
+              <path
+                d="M520,188 C520,210 290,210 290,232"
+                stroke="#3a3a4a"
+                strokeWidth="1.2"
+                strokeDasharray="4 3"
+                fill="none"
+                markerEnd="url(#arch-arrow)"
+              />
+              <path
+                d="M680,188 C680,210 910,210 910,232"
+                stroke="#3a3a4a"
+                strokeWidth="1.2"
+                strokeDasharray="4 3"
+                fill="none"
+                markerEnd="url(#arch-arrow)"
+              />
+
+              {/* ── L3 LEFT: ERP Operations (LIVE) ── */}
+              <rect
+                x="60"
+                y="234"
+                width="460"
+                height="230"
+                rx="10"
+                fill="rgba(99,215,224,0.04)"
+                stroke="#63d7e0"
+                strokeWidth="1.4"
+                strokeDasharray="5 3"
+              />
+              {/* Header band */}
+              <rect
+                x="60"
+                y="234"
+                width="460"
+                height="46"
+                rx="10"
+                fill="rgba(99,215,224,0.09)"
+              />
+              <rect
+                x="60"
+                y="256"
+                width="460"
+                height="24"
+                fill="rgba(99,215,224,0.09)"
+              />
+              <text
+                x="160"
+                y="263"
+                textAnchor="middle"
+                fill="#63d7e0"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="700"
+                letterSpacing="-0.1"
+              >
+                ERP Operations
+              </text>
+              {/* LIVE status dot + badge */}
+              <circle cx="344" cy="259" r="3.5" fill="#00e676" />
+              <rect
+                x="352"
+                y="251"
+                width="36"
+                height="16"
+                rx="4"
+                fill="rgba(0,230,118,0.15)"
+                stroke="rgba(0,230,118,0.4)"
+                strokeWidth="0.8"
+              />
+              <text
+                x="370"
+                y="262"
+                textAnchor="middle"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9"
+                fontWeight="700"
+                letterSpacing="0.5"
+              >
+                LIVE
+              </text>
+              <text
+                x="430"
+                y="263"
+                textAnchor="start"
+                fill="#4a6a58"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9.5"
+              >
+                Back-office
+              </text>
+
+              {/* ── Module: Products & Inventory ── */}
+              <rect
+                x="80"
+                y="296"
+                width="190"
+                height="44"
+                rx="8"
+                fill="rgba(99,215,224,0.06)"
+                stroke="#3a6060"
+                strokeWidth="1"
+              />
+              {/* ✓ LIVE label */}
+              <text
+                x="98"
+                y="312"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.4"
+              >
+                ✓ LIVE
+              </text>
+              {/* Green checkmark badge pill */}
+              <rect
+                x="234"
+                y="299"
+                width="30"
+                height="14"
+                rx="4"
+                fill="rgba(0,230,118,0.18)"
+                stroke="rgba(0,230,118,0.35)"
+                strokeWidth="0.7"
+              />
+              <text
+                x="249"
+                y="309"
+                textAnchor="middle"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+              >
+                ✓
+              </text>
+              <text
+                x="175"
+                y="331"
+                textAnchor="middle"
+                fill="#c8ddd8"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Products &amp; Inventory
+              </text>
+
+              {/* ── Module: Orders & Customers ── */}
+              <rect
+                x="290"
+                y="296"
+                width="210"
+                height="44"
+                rx="8"
+                fill="rgba(99,215,224,0.06)"
+                stroke="#3a6060"
+                strokeWidth="1"
+              />
+              <text
+                x="308"
+                y="312"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.4"
+              >
+                ✓ LIVE
+              </text>
+              <rect
+                x="464"
+                y="299"
+                width="30"
+                height="14"
+                rx="4"
+                fill="rgba(0,230,118,0.18)"
+                stroke="rgba(0,230,118,0.35)"
+                strokeWidth="0.7"
+              />
+              <text
+                x="479"
+                y="309"
+                textAnchor="middle"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+              >
+                ✓
+              </text>
+              <text
+                x="395"
+                y="331"
+                textAnchor="middle"
+                fill="#c8ddd8"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Orders &amp; Customers
+              </text>
+
+              {/* ── Module: Reports & Analytics ── */}
+              <rect
+                x="80"
+                y="354"
+                width="190"
+                height="44"
+                rx="8"
+                fill="rgba(99,215,224,0.06)"
+                stroke="#3a6060"
+                strokeWidth="1"
+              />
+              <text
+                x="98"
+                y="370"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.4"
+              >
+                ✓ LIVE
+              </text>
+              <rect
+                x="234"
+                y="357"
+                width="30"
+                height="14"
+                rx="4"
+                fill="rgba(0,230,118,0.18)"
+                stroke="rgba(0,230,118,0.35)"
+                strokeWidth="0.7"
+              />
+              <text
+                x="249"
+                y="367"
+                textAnchor="middle"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+              >
+                ✓
+              </text>
+              <text
+                x="175"
+                y="389"
+                textAnchor="middle"
+                fill="#c8ddd8"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Reports &amp; Analytics
+              </text>
+
+              {/* ── Module: Staff & Permissions ── */}
+              <rect
+                x="290"
+                y="354"
+                width="210"
+                height="44"
+                rx="8"
+                fill="rgba(99,215,224,0.06)"
+                stroke="#3a6060"
+                strokeWidth="1"
+              />
+              <text
+                x="308"
+                y="370"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.4"
+              >
+                ✓ LIVE
+              </text>
+              <rect
+                x="464"
+                y="357"
+                width="30"
+                height="14"
+                rx="4"
+                fill="rgba(0,230,118,0.18)"
+                stroke="rgba(0,230,118,0.35)"
+                strokeWidth="0.7"
+              />
+              <text
+                x="479"
+                y="367"
+                textAnchor="middle"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+              >
+                ✓
+              </text>
+              <text
+                x="395"
+                y="389"
+                textAnchor="middle"
+                fill="#c8ddd8"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Staff &amp; Permissions
+              </text>
+
+              {/* ── Feature: COD & Payment (LIVE) ── */}
+              <rect
+                x="80"
+                y="412"
+                width="420"
+                height="38"
+                rx="8"
+                fill="rgba(0,230,118,0.05)"
+                stroke="rgba(0,230,118,0.3)"
+                strokeWidth="1"
+              />
+              <text
+                x="98"
+                y="427"
+                fill="#00e676"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.4"
+              >
+                ✓ LIVE
+              </text>
+              <text
+                x="310"
+                y="436"
+                textAnchor="middle"
+                fill="#63d7e0"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="11.5"
+                fontWeight="600"
+              >
+                COD &amp; Payment Tracking
+              </text>
+
+              {/* ── L3 RIGHT: Storefront Module (COMING SOON) ── */}
+              <rect
+                x="680"
+                y="234"
+                width="460"
+                height="230"
+                rx="10"
+                fill="rgba(255,157,92,0.02)"
+                stroke="#ff9d5c"
+                strokeWidth="1"
+                strokeDasharray="5 3"
+                opacity="0.6"
+              />
+              {/* Header band */}
+              <rect
+                x="680"
+                y="234"
+                width="460"
+                height="46"
+                rx="10"
+                fill="rgba(255,157,92,0.05)"
+                opacity="0.7"
+              />
+              <rect
+                x="680"
+                y="256"
+                width="460"
+                height="24"
+                fill="rgba(255,157,92,0.05)"
+                opacity="0.7"
+              />
+              <text
+                x="800"
+                y="263"
+                textAnchor="middle"
+                fill="#ff9d5c"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="700"
+                letterSpacing="-0.1"
+                opacity="0.7"
+              >
+                Storefront Module
+              </text>
+              {/* 🕐 Coming Soon badge */}
+              <rect
+                x="866"
+                y="251"
+                width="96"
+                height="16"
+                rx="4"
+                fill="rgba(255,157,92,0.15)"
+                stroke="rgba(255,157,92,0.4)"
+                strokeWidth="0.8"
+              />
+              <text
+                x="914"
+                y="262"
+                textAnchor="middle"
+                fill="#ff9d5c"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9"
+                fontWeight="700"
+                letterSpacing="0.4"
+              >
+                🕐 COMING SOON
+              </text>
+              <text
+                x="1108"
+                y="263"
+                textAnchor="start"
+                fill="#3a3a48"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9.5"
+              >
+                In development
+              </text>
+
+              {/* Frosted overlay over module body to dim it */}
+              <rect
+                x="680"
+                y="282"
+                width="460"
+                height="180"
+                rx="6"
+                fill="rgba(8,8,12,0.45)"
+              />
+
+              {/* Surface cards — dimmed/locked */}
+              {/* Public Website */}
+              <rect
+                x="700"
+                y="296"
+                width="200"
+                height="44"
+                rx="8"
+                fill="#0d0d14"
+                stroke="#1e1e28"
+                strokeWidth="1"
+                opacity="0.7"
+              />
+              <text
+                x="730"
+                y="312"
+                fill="#3a3a4a"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.3"
+              >
+                🔒 COMING SOON
+              </text>
+              <text
+                x="800"
+                y="331"
+                textAnchor="middle"
+                fill="#4a4a58"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Public Website
+              </text>
+
+              {/* SEO Optimized Pages */}
+              <rect
+                x="918"
+                y="296"
+                width="202"
+                height="44"
+                rx="8"
+                fill="#0d0d14"
+                stroke="#1e1e28"
+                strokeWidth="1"
+                opacity="0.7"
+              />
+              <text
+                x="948"
+                y="312"
+                fill="#3a3a4a"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.3"
+              >
+                🔒 COMING SOON
+              </text>
+              <text
+                x="1019"
+                y="331"
+                textAnchor="middle"
+                fill="#4a4a58"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                SEO Optimized Pages
+              </text>
+
+              {/* Customer Orders */}
+              <rect
+                x="700"
+                y="354"
+                width="200"
+                height="44"
+                rx="8"
+                fill="#0d0d14"
+                stroke="#1e1e28"
+                strokeWidth="1"
+                opacity="0.7"
+              />
+              <text
+                x="730"
+                y="370"
+                fill="#3a3a4a"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.3"
+              >
+                🔒 COMING SOON
+              </text>
+              <text
+                x="800"
+                y="389"
+                textAnchor="middle"
+                fill="#4a4a58"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Customer Orders
+              </text>
+
+              {/* Checkout Flow */}
+              <rect
+                x="918"
+                y="354"
+                width="202"
+                height="44"
+                rx="8"
+                fill="#0d0d14"
+                stroke="#1e1e28"
+                strokeWidth="1"
+                opacity="0.7"
+              />
+              <text
+                x="948"
+                y="370"
+                fill="#3a3a4a"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.3"
+              >
+                🔒 COMING SOON
+              </text>
+              <text
+                x="1019"
+                y="389"
+                textAnchor="middle"
+                fill="#4a4a58"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="12"
+                fontWeight="600"
+              >
+                Checkout Flow
+              </text>
+
+              {/* Store Settings & Branding — dimmed */}
+              <rect
+                x="700"
+                y="412"
+                width="420"
+                height="38"
+                rx="8"
+                fill="#0d0d14"
+                stroke="#1e1e26"
+                strokeWidth="1"
+                opacity="0.6"
+              />
+              <text
+                x="730"
+                y="427"
+                fill="#3a3a4a"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="8.5"
+                fontWeight="700"
+                letterSpacing="0.3"
+              >
+                🔒 COMING SOON
+              </text>
+              <text
+                x="910"
+                y="436"
+                textAnchor="middle"
+                fill="#3a3a4a"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="11.5"
+                fontWeight="600"
+              >
+                Store Settings &amp; Branding
+              </text>
+
+              {/* connectors: ERP → Backend (bright), Storefront → Backend (dimmed) */}
+              <path
+                d="M290,464 C290,498 560,522 560,540"
+                stroke="#3a3a4a"
+                strokeWidth="1.2"
+                strokeDasharray="4 3"
+                fill="none"
+                markerEnd="url(#arch-arrow)"
+              />
+              <path
+                d="M910,464 C910,498 640,522 640,540"
+                stroke="#2a2a38"
+                strokeWidth="1"
+                strokeDasharray="4 4"
+                fill="none"
+                opacity="0.4"
+                markerEnd="url(#arch-arrow)"
+              />
+              <rect
+                x="480"
+                y="480"
+                width="240"
+                height="22"
+                rx="5"
+                fill="#111118"
+                stroke="#2a2a35"
+                strokeWidth="1"
+              />
+              <text
+                x="600"
+                y="495"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9.5"
+                letterSpacing="0.5"
+              >
+                REST API · Business Logic
+              </text>
+
+              {/* ── L4: Shared OrderFlow Backend ── */}
+              <rect
+                x="200"
+                y="542"
+                width="800"
+                height="68"
+                rx="10"
+                fill="url(#backend-grad)"
+                stroke="#63d7e0"
+                strokeWidth="1.2"
+              />
+              <rect
+                x="200"
+                y="542"
+                width="800"
+                height="2.5"
+                rx="1.2"
+                fill="#63d7e0"
+              />
+              <rect
+                x="220"
+                y="558"
+                width="178"
+                height="20"
+                rx="5"
+                fill="rgba(99,215,224,0.08)"
+              />
+              <text
+                x="309"
+                y="571"
+                textAnchor="middle"
+                fill="#63d7e0"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9"
+                letterSpacing="0.4"
+              >
+                Authentication &amp; Authorization
+              </text>
+              <text
+                x="600"
+                y="572"
+                textAnchor="middle"
+                fill="#eceef1"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="14"
+                fontWeight="700"
+                letterSpacing="-0.3"
+              >
+                Shared OrderFlow Backend API
+              </text>
+              <text
+                x="600"
+                y="588"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+                letterSpacing="0.2"
+              >
+                Business Logic · Tenant Context · Data Access Layer
+              </text>
+              <rect
+                x="802"
+                y="558"
+                width="178"
+                height="20"
+                rx="5"
+                fill="rgba(99,215,224,0.08)"
+              />
+              <text
+                x="891"
+                y="571"
+                textAnchor="middle"
+                fill="#63d7e0"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9"
+                letterSpacing="0.4"
+              >
+                Tenant Isolation Enforced
+              </text>
+
+              {/* connector: Backend → Database */}
+              <line
+                x1="600"
+                y1="610"
+                x2="600"
+                y2="660"
+                stroke="#3a3a4a"
+                strokeWidth="1.2"
+                strokeDasharray="4 3"
+                markerEnd="url(#arch-arrow)"
+              />
+              <rect
+                x="614"
+                y="624"
+                width="72"
+                height="18"
+                rx="4"
+                fill="#1a1a22"
+              />
+              <text
+                x="650"
+                y="636"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="9.5"
+                letterSpacing="0.3"
+              >
+                Data Layer
+              </text>
+
+              {/* ── L5: Database Layer ── */}
+              <rect
+                x="320"
+                y="662"
+                width="560"
+                height="68"
+                rx="10"
+                fill="url(#db-grad)"
+                stroke="#b18cff"
+                strokeWidth="1.2"
+              />
+              <rect
+                x="320"
+                y="662"
+                width="560"
+                height="2.5"
+                rx="1.2"
+                fill="#b18cff"
+              />
+              <text
+                x="600"
+                y="690"
+                textAnchor="middle"
+                fill="#eceef1"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="14"
+                fontWeight="700"
+                letterSpacing="-0.3"
+              >
+                Database Layer
+              </text>
+              <text
+                x="600"
+                y="706"
+                textAnchor="middle"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+                letterSpacing="0.2"
+              >
+                MongoDB · Tenant-Scoped Collections · Indexed Queries
+              </text>
+
+              {/* ── Legend ── */}
+              <line
+                x1="60"
+                y1="756"
+                x2="1140"
+                y2="756"
+                stroke="#222228"
+                strokeWidth="1"
+              />
+              {/* ERP — Live */}
+              <circle cx="64" cy="770" r="4" fill="#00e676" />
+              <text
+                x="74"
+                y="775"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+              >
+                ERP Module — Live
+              </text>
+              {/* Storefront — Coming Soon */}
+              <rect
+                x="186"
+                y="764"
+                width="8"
+                height="8"
+                rx="2"
+                fill="#ff9d5c"
+                opacity="0.4"
+              />
+              <text
+                x="200"
+                y="775"
+                fill="#4a4a58"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+              >
+                Storefront — Coming Soon
+              </text>
+              <rect
+                x="336"
+                y="766"
+                width="8"
+                height="8"
+                rx="2"
+                fill="#eceef1"
+              />
+              <text
+                x="350"
+                y="775"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+              >
+                Shared Backend
+              </text>
+              <rect
+                x="474"
+                y="766"
+                width="8"
+                height="8"
+                rx="2"
+                fill="#b18cff"
+              />
+              <text
+                x="488"
+                y="775"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+              >
+                Database Layer
+              </text>
+              <rect
+                x="594"
+                y="766"
+                width="8"
+                height="8"
+                rx="2"
+                fill="#f2d449"
+              />
+              <text
+                x="608"
+                y="775"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+              >
+                Tenant Core
+              </text>
+              <rect
+                x="700"
+                y="766"
+                width="8"
+                height="8"
+                rx="2"
+                fill="#4a4a58"
+                stroke="#6a6a78"
+                strokeWidth="1"
+              />
+              <text
+                x="714"
+                y="775"
+                fill="#6a6a78"
+                fontFamily="Inter,system-ui,sans-serif"
+                fontSize="10"
+              >
+                REST API Connection
+              </text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
       {/* =============== FEATURES =============== */}
       <section className="erp-features" id="erp-features">
         <div className="erp-container">
@@ -925,16 +2217,140 @@ const ERP = () => {
         </div>
       </section>
 
-      {/* =============== LIVE NOW CTA =============== */}
+      {/* =============== RELEASE v1.0.2 CTA =============== */}
       <section className="erp-coming-soon" id="erp-coming-soon">
         <div className="erp-coming-soon-content erp-animate">
+          {/* Version badge */}
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              background: "rgba(0,230,118,0.1)",
+              border: "1px solid rgba(241, 241, 241, 1)",
+              borderRadius: "100px",
+              padding: "5px 16px 5px 12px",
+              marginBottom: "20px",
+              fontSize: "12px",
+              fontWeight: 700,
+              color: "#ffffffff",
+              letterSpacing: "0.3px",
+            }}
+          >
+            <span
+              style={{
+                width: "7px",
+                height: "7px",
+                background: "#ffffffff",
+                borderRadius: "50%",
+                display: "inline-block",
+                boxShadow: "0 0 8px #ffffffff",
+                animation: "erp-pulse 2s infinite",
+              }}
+            />
+            Public Testing · Release v1.0.2
+          </div>
+
           <h2>{t.comingSoonTitle}</h2>
           <p>{t.comingSoonSub}</p>
+
+          {/* Changelog */}
+          <div
+            style={{
+              margin: "32px auto",
+              maxWidth: "520px",
+              background:
+                "linear-gradient(180deg, rgba(22,22,25,0.8) 0%, rgba(13,13,20,0.8) 100%)",
+              border: "1px solid rgba(255,255,255,0.05)",
+              boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+              borderRadius: "16px",
+              padding: "24px 32px",
+              textAlign: "left",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginBottom: "20px",
+                paddingBottom: "12px",
+                borderBottom: "1px solid rgba(255,255,255,0.06)",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  letterSpacing: "0.8px",
+                  color: "#eceef1",
+                  textTransform: "uppercase",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                }}
+              >
+                <span style={{ color: "#00e676" }}>✦</span> {t.changelogTitle}
+              </div>
+              <span
+                style={{ fontSize: "11px", color: "#6a6a78", fontWeight: 500 }}
+              >
+                v1.0.2
+              </span>
+            </div>
+
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "12px" }}
+            >
+              {t.changelog.map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "12px",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: "9px",
+                      fontWeight: 800,
+                      letterSpacing: "0.5px",
+                      padding: "3px 8px",
+                      borderRadius: "6px",
+                      marginTop: "2px",
+                      flexShrink: 0,
+                      background:
+                        item.type === "new"
+                          ? "rgba(0,230,118,0.12)"
+                          : "rgba(255,157,92,0.1)",
+                      color: item.type === "new" ? "#00e676" : "#ff9d5c",
+                      border: `1px solid ${item.type === "new" ? "rgba(0,230,118,0.25)" : "rgba(255,157,92,0.25)"}`,
+                    }}
+                  >
+                    {item.type === "new" ? "NEW" : "SOON"}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "14px",
+                      lineHeight: "1.5",
+                      color: item.type === "new" ? "#eceef1" : "#6a6a78",
+                      fontWeight: 400,
+                    }}
+                  >
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <a
-            className="erp-btn-primary"
+            className="erp-release-btn"
             href="https://orderflow.mommentx.space/register"
             rel="noopener noreferrer"
-            style={{ display: "inline-flex", textDecoration: "none" }}
           >
             {t.comingSoonBtn} <ExternalLink size={18} />
           </a>
@@ -1017,15 +2433,27 @@ const ERP = () => {
         <div className="erp-container">
           <div className="erp-footer-inner">
             <div className="erp-footer-brand">
-              <div className="erp-nav-logo" style={{ cursor: "default", marginBottom: "8px" }}>
+              <div
+                className="erp-nav-logo"
+                style={{ cursor: "default", marginBottom: "8px" }}
+              >
                 <div className="erp-nav-logo-icon">O</div>
                 OrderFlow{" "}
                 <span style={{ fontWeight: 400, opacity: 0.6, marginLeft: 4 }}>
                   ERP
                 </span>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
-                <span style={{ fontSize: "12px", opacity: 0.7 }}>Developed by</span>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  marginBottom: "16px",
+                }}
+              >
+                <span style={{ fontSize: "12px", opacity: 0.7 }}>
+                  Developed by
+                </span>
                 <div
                   style={{
                     fontFamily: "'Blanka', sans-serif",
