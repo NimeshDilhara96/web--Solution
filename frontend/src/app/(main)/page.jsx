@@ -55,8 +55,37 @@ const homeSchema = [
         }
       }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Web Application Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "MommentX"
+    },
+    "areaServed": "Worldwide",
+    "description": "End-to-end custom web application development, scaling from MVPs to enterprise-grade systems for global businesses.",
+    "serviceType": "Software Development"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Software Solutions",
+    "provider": {
+      "@type": "Organization",
+      "name": "MommentX"
+    },
+    "areaServed": "Worldwide",
+    "description": "Integration of artificial intelligence and machine learning models to automate processes and enhance business software capabilities globally.",
+    "serviceType": "AI Development"
   }
 ];
+
+export const metadata = {
+  title: "Top Custom Software Development Agency | MommentX",
+  description: "Looking for an international web development partner? MommentX delivers world-class custom software, AI solutions, and ERP systems to businesses globally.",
+};
 
 const Home = () => {
   return (
