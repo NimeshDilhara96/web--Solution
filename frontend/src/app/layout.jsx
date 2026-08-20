@@ -2,8 +2,17 @@ import "./globals.css";
 import React from 'react';
 
 export const metadata = {
-  title: "Vite + React to Next.js",
-  description: "Converted to Next.js",
+  title: "MommentX | Custom Software & Business Automation",
+  description: "MommentX specializes in scalable web applications, AI software solutions, ERP development, and business automation.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
