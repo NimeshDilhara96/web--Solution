@@ -1,10 +1,9 @@
 import React from 'react';
-import Hero from '../components/hero';
-import Expertise from '../components/Expertise';
-import SaasEcosystem from '../components/SaasEcosystem';
-import WhyUs from '../components/WhyUs';
-import Contact from '../components/contact';
-import SEO from '../components/SEO';
+import Hero from '../../components/hero';
+import Expertise from '../../components/Expertise';
+import SaasEcosystem from '../../components/SaasEcosystem';
+import WhyUs from '../../components/WhyUs';
+import Contact from '../../components/contact';
 
 const homeSchema = [
   {
@@ -62,7 +61,10 @@ const homeSchema = [
 const Home = () => {
   return (
     <>
-      <SEO url="/" schema={homeSchema} />
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} 
+      />
       <Hero />
       <Expertise />
       <SaasEcosystem />

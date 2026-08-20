@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   ShoppingCart,
@@ -33,7 +34,6 @@ import {
   ChevronUp,
   ExternalLink,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import "./erp.css";
 
 /* Inline SVG social icons (removed from recent lucide-react) */
@@ -495,7 +495,8 @@ const ERP = () => {
     };
 
     const { title, description, keywords } = seo[lang] || seo.en;
-    // We now use Helmet in the render method for Meta tags
+    document.title = title;
+    
     // Language
     document.documentElement.lang = lang === "si" ? "si" : "en";
 
@@ -644,44 +645,7 @@ const ERP = () => {
 
   return (
     <div className={`erp-page ${darkMode ? "erp-dark" : ""}`}>
-      <Helmet>
-        <title>{currentSeo.title}</title>
-        <meta name="description" content={currentSeo.description} />
-        <meta name="keywords" content={currentSeo.keywords} />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={currentSeo.title} />
-        <meta property="og:description" content={currentSeo.description} />
-        <meta
-          property="og:locale"
-          content={lang === "si" ? "si_LK" : "en_US"}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={currentSeo.title} />
-        <meta name="twitter:description" content={currentSeo.description} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "OrderFlow ERP",
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web",
-            url: "https://orderflow.mommentx.space",
-            description: currentSeo.description,
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "LKR",
-              availability: "https://schema.org/InStock",
-            },
-            author: {
-              "@type": "Organization",
-              name: "OrderFlow",
-            },
-          })}
-        </script>
-      </Helmet>
+
       {/* =============== NAVBAR =============== */}
       <nav className={`erp-nav ${scrolled ? "erp-nav-scrolled" : ""}`}>
         <div className="erp-container">

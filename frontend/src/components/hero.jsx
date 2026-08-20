@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import heroImage from "../assets/hero.png";
 
@@ -199,7 +200,7 @@ const Hero = () => {
               }}
             >
               <img
-                src={heroImage}
+                src={heroImage.src}
                 alt="MommentX Platform"
                 style={{
                   width: "100%",

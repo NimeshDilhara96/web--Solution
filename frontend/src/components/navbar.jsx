@@ -1,13 +1,15 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,8 +29,8 @@ const Navbar = () => {
 
   // Effect to handle scrolling if coming from another page
   useEffect(() => {
-    if (location.pathname === '/' && location.hash) {
-      const id = location.hash.replace('#', '');
+    if (pathname === '/' && window.location.hash) {
+      const id = window.location.hash.replace('#', '');
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
@@ -36,11 +38,11 @@ const Navbar = () => {
         }
       }, 100);
     }
-  }, [location]);
+  }, [pathname]);
 
   const scrollTo = (id) => {
-    if (location.pathname !== '/') {
-      navigate(`/#${id}`);
+    if (pathname !== '/') {
+      router.push(`/#${id}`);
       setIsMenuOpen(false);
       return;
     }
@@ -63,7 +65,7 @@ const Navbar = () => {
         {/* Logo — Blanka font, preserved exactly as original */}
         <div
           onClick={() => {
-            if (location.pathname !== '/') navigate('/');
+            if (pathname !== '/') router.push('/');
             else scrollTo("home");
           }}
           style={{
@@ -97,15 +99,15 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <span
               key={link.id}
-              className={`nav-link ${activeSection === link.id && location.pathname === '/' ? "active" : ""}`}
+              className={`nav-link ${activeSection === link.id && pathname === '/' ? "active" : ""}`}
               onClick={() => scrollTo(link.id)}
             >
               {link.label}
             </span>
           ))}
           <Link
-            to="/erp"
-            className={`nav-link ${location.pathname === '/erp' ? "active" : ""}`}
+            href="/erp"
+            className={`nav-link ${pathname === '/erp' ? "active" : ""}`}
             onClick={() => setIsMenuOpen(false)}
             style={{ textDecoration: 'none' }}
           >
@@ -144,7 +146,7 @@ const Navbar = () => {
             </span>
           ))}
           <Link
-            to="/erp"
+            href="/erp"
             className="nav-link"
             onClick={() => setIsMenuOpen(false)}
             style={{ textDecoration: 'none' }}

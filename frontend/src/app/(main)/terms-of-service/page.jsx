@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const TermsOfService = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div style={{ maxWidth: '800px', margin: '120px auto', padding: '0 24px', lineHeight: '1.6' }}>

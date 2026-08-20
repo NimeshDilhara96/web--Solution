@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Footer = () => {
   const scrollTo = (id) => {
@@ -128,10 +129,10 @@ const Footer = () => {
             className="footer-copy"
             style={{ display: "flex", gap: "20px" }}
           >
-            <Link to="/privacy-policy" style={{ color: "#3d4555", transition: "color 0.2s", textDecoration: "none" }}>
+            <Link href="/privacy-policy" style={{ color: "#3d4555", transition: "color 0.2s", textDecoration: "none" }}>
               Privacy Policy
             </Link>
-            <Link to="/terms-of-service" style={{ color: "#3d4555", transition: "color 0.2s", textDecoration: "none" }}>
+            <Link href="/terms-of-service" style={{ color: "#3d4555", transition: "color 0.2s", textDecoration: "none" }}>
               Terms of Service
             </Link>
           </span>
