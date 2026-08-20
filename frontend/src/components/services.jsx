@@ -11,9 +11,30 @@ const Services = () => {
   ];
 
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": services.map((service, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Service",
+        "name": service.title,
+        "description": service.desc,
+        "provider": {
+          "@type": "Organization",
+          "name": "MommentX"
+        }
+      }
+    }))
+  };
 
   return (
     <section id="services">
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} 
+      />
       <div className="section-inner">
         <div className="section-head">
           <div>
