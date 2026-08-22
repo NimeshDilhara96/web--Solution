@@ -85,7 +85,7 @@ const Contact = () => {
         <div>
           <div className="section-label" style={{ marginBottom: '20px' }}>Get In Touch</div>
           <h2 className="contact-title">
-            Let's Start<br />Your Project
+            Let&apos;s Start<br />Your Project
           </h2>
           <p className="contact-sub">
             Have a project in mind? Fill out the form and our team will reach out within

@@ -10,14 +10,14 @@ const TermsOfService = () => {
       <section style={{ marginBottom: '32px' }}>
         <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', fontWeight: 'bold' }}>1. Agreement to Terms</h2>
         <p style={{ marginBottom: '16px' }}>
-          These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and MommentX ("we", "us", or "our"), concerning your access to and use of our website and services.
+          These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;) and MommentX (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), concerning your access to and use of our website and services.
         </p>
       </section>
 
       <section style={{ marginBottom: '32px' }}>
         <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', fontWeight: 'bold' }}>2. Intellectual Property Rights</h2>
         <p style={{ marginBottom: '16px' }}>
-          Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.
+          Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the &quot;Content&quot;) and the trademarks, service marks, and logos contained therein (the &quot;Marks&quot;) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.
         </p>
       </section>
 
