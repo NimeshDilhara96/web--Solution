@@ -1636,3 +1636,600 @@ footer {
     font-size: 11px;
   }
 }
+
+/* ============================================================
+   DISCOVER — Digital Products Marketplace
+   ============================================================ */
+
+/* ── Discover Hero ── */
+.discover-hero {
+  background: linear-gradient(135deg, #f8f9fb 0%, #f0f2f8 100%);
+  padding: 120px 24px 72px;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+.discover-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.discover-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--color-text);
+  margin: 0 0 20px;
+}
+.discover-hero-desc {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 540px;
+  margin: 0 auto 40px;
+}
+
+/* ── Discover Stats Strip ── */
+.discover-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.discover-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0 28px;
+}
+.discover-stat-num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1;
+}
+.discover-stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-hint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.discover-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+/* ── Catalog Section ── */
+.discover-catalog {
+  padding: 64px 24px 96px;
+  background: #ffffff;
+}
+.discover-catalog-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Filter Tabs ── */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+.filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border);
+  background: #ffffff;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.filter-tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.filter-tab.active {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: #ffffff;
+}
+.filter-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.2);
+  color: inherit;
+}
+.filter-tab:not(.active) .filter-tab-count {
+  background: var(--color-bg-muted);
+  color: var(--color-text-hint);
+}
+
+/* ── Product Grid ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Product Card ── */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+  animation: fadeUp 0.5s ease-out both;
+}
+.product-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  border-color: var(--color-border);
+}
+
+/* ── Thumbnail ── */
+.product-card-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-bg-soft);
+}
+.product-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+.product-card:hover .product-card-img {
+  transform: scale(1.04);
+}
+
+/* ── Category Badge ── */
+.product-badge {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Card Body ── */
+.product-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-card-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.product-card-title {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin: 0;
+  flex: 1;
+}
+.product-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.product-card-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.product-tag {
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.product-card-cta {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border-soft);
+}
+.product-card-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-accent);
+  transition: gap 0.18s;
+}
+.product-card:hover .product-card-cta-link {
+  gap: 8px;
+}
+
+/* ── Empty state ── */
+.discover-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 24px;
+  color: var(--color-text-hint);
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ── CTA Banner ── */
+.discover-cta-banner {
+  background: var(--color-text);
+  padding: 72px 24px;
+}
+.discover-cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.discover-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+}
+.discover-cta-desc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.65;
+  margin: 0 0 32px;
+}
+.discover-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: var(--color-text);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.18s;
+}
+.discover-cta-btn:hover {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   PRODUCT DETAIL PAGE
+   ═══════════════════════════════════════ */
+
+.detail-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 96px;
+}
+
+/* ── Breadcrumb ── */
+.detail-breadcrumb {
+  border-bottom: 1px solid var(--color-border-soft);
+  background: var(--color-bg-soft);
+  padding: 16px 24px;
+}
+.detail-breadcrumb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.detail-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: gap 0.18s;
+}
+.detail-back-link:hover {
+  gap: 8px;
+}
+.detail-breadcrumb-sep {
+  color: var(--color-border);
+}
+.detail-breadcrumb-current {
+  color: var(--color-text);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Two-column Layout ── */
+.detail-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ── Gallery ── */
+.detail-gallery-col {
+  position: sticky;
+  top: 90px;
+}
+.detail-main-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-bg-soft);
+  aspect-ratio: 16 / 10;
+}
+.detail-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.detail-thumb-strip {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.detail-thumb {
+  width: 80px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.18s;
+}
+.detail-thumb:hover {
+  border-color: var(--color-accent);
+}
+
+/* ── Info Column ── */
+.detail-info-col {
+  display: flex;
+  flex-direction: column;
+}
+.detail-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+.detail-short-desc {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+/* ── CTA Box ── */
+.detail-cta-box {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  background: var(--color-bg-soft);
+  margin-bottom: 36px;
+}
+.detail-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.detail-price-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-hint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.detail-price-value {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+/* ── Active CTA Button ── */
+.cta-active-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.cta-active-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.cta-active-btn:active {
+  transform: translateY(1px);
+}
+
+/* ── Placeholder CTA Button ── */
+.cta-placeholder-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: not-allowed;
+  opacity: 0.72;
+  transition: opacity 0.2s;
+  letter-spacing: -0.01em;
+}
+.cta-placeholder-btn:hover {
+  opacity: 0.78;
+}
+.cta-placeholder-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.cta-placeholder-note {
+  font-size: 12px;
+  color: var(--color-text-hint);
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ── Detail Sections ── */
+.detail-section {
+  margin-bottom: 32px;
+}
+.detail-section-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 14px;
+}
+.detail-full-desc {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+.detail-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+.detail-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Responsive: Discover ── */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .detail-gallery-col {
+    position: static;
+  }
+}
+@media (max-width: 640px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .discover-hero {
+    padding: 96px 20px 56px;
+  }
+  .discover-stats {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+  .discover-stat-divider {
+    width: 36px;
+    height: 1px;
+  }
+  .discover-catalog {
+    padding: 48px 20px 72px;
+  }
+  .detail-layout {
+    padding: 32px 20px 0;
+  }
+}
+

@@ -55,8 +55,31 @@ const Contact = () => {
     { icon: '⏱️', label: 'Response Time', value: 'Within 24 hours' },
   ];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact MommentX",
+    "description": "Get in touch with MommentX for custom software and web development projects.",
+    "url": "https://mommentx.space/#contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "MommentX",
+      "email": "mommentx@gmail.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "mommentx@gmail.com",
+        "availableLanguage": ["English", "Sinhala"]
+      }
+    }
+  };
+
   return (
     <section id="contact" className="section-wrapper-soft">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <div className="contact-inner">
         {/* Left — Info */}
         <div>

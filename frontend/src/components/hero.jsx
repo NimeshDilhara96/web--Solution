@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import heroImage from "../assets/hero.png";
 
 /* ─── Design tokens (from source HTML) ─── */
@@ -22,13 +23,15 @@ const F = {
 
 /* ─── Marquee items ─── */
 const MARQUEE = [
+  "Digital Templates",
   "Full-Stack Development",
+  "Figma Kits",
   "AI Solutions",
+  "Design Systems",
   "UI/UX Design",
   "Enterprise Systems",
-  "MERN Stack",
-  "Cloud Infrastructure",
   "SaaS Products",
+  "Cloud Infrastructure",
   "Scalable Architecture",
 ];
 
@@ -138,11 +141,11 @@ const Hero = () => {
                   margin: "0 0 20px",
                 }}
               >
-                Building Scalable
+                World-Class
                 <br />
                 Digital Products &amp;
                 <br />
-                Business Automation.
+                Web Solutions.
               </h1>
 
               {/* Body */}
@@ -151,12 +154,46 @@ const Hero = () => {
                   color: C.mute,
                   fontSize: "clamp(15px, 2vw, 17px)",
                   lineHeight: 1.65,
-                  maxWidth: "420px",
-                  margin: "0 0 32px",
+                  maxWidth: "440px",
+                  margin: "0 0 28px",
                 }}
               >
-                MommentX is a global software development company delivering custom software, scalable SaaS platforms, and intelligent automation. We solve complex problems to help businesses worldwide scale, innovate, and thrive.
+                MommentX is a global digital studio crafting premium Figma templates, design systems, SaaS platforms, and custom software. Trusted by founders and teams worldwide to ship faster and look exceptional.
               </p>
+
+              {/* Hero CTAs */}
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "12px",
+                  marginBottom: "28px",
+                }}
+              >
+                <Link
+                  href="/discover"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    background: C.v500,
+                    color: C.white,
+                    fontFamily: F.body,
+                    fontWeight: 600,
+                    fontSize: "14px",
+                    padding: "12px 22px",
+                    borderRadius: "10px",
+                    textDecoration: "none",
+                    transition: "background 0.2s",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  Browse Templates
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
 
               {/* Rating cards */}
               <div

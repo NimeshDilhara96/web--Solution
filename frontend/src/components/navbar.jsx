@@ -54,9 +54,9 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Services", id: "expertise" },
-    { label: "Products", id: "saas" },
-    { label: "Case Studies", id: "why-us" },
+    { label: "Services", path: "/", hash: "expertise" },
+    { label: "About Us", path: "/about" },
+    { label: "Technologies", path: "/technologies" },
   ];
 
   return (
@@ -96,15 +96,38 @@ const Navbar = () => {
 
         {/* Desktop links */}
         <div className="nav-links">
-          {navLinks.map((link) => (
-            <span
-              key={link.id}
-              className={`nav-link ${activeSection === link.id && pathname === '/' ? "active" : ""}`}
-              onClick={() => scrollTo(link.id)}
-            >
-              {link.label}
-            </span>
-          ))}
+          {navLinks.map((link) => {
+            if (link.hash) {
+              return (
+                <span
+                  key={link.label}
+                  className={`nav-link ${activeSection === link.hash && pathname === '/' ? "active" : ""}`}
+                  onClick={() => scrollTo(link.hash)}
+                >
+                  {link.label}
+                </span>
+              );
+            }
+            return (
+              <Link
+                key={link.path}
+                href={link.path}
+                className={`nav-link ${pathname.startsWith(link.path) && link.path !== '/' ? "active" : ""}`}
+                onClick={() => setIsMenuOpen(false)}
+                style={{ textDecoration: 'none' }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link
+            href="/discover"
+            className={`nav-link ${pathname.startsWith('/discover') ? "active" : ""}`}
+            onClick={() => setIsMenuOpen(false)}
+            style={{ textDecoration: 'none' }}
+          >
+            Discover
+          </Link>
           <Link
             href="/erp"
             className={`nav-link ${pathname === '/erp' ? "active" : ""}`}
@@ -136,15 +159,38 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="mobile-menu">
-          {navLinks.map((link) => (
-            <span
-              key={link.id}
-              className="nav-link"
-              onClick={() => scrollTo(link.id)}
-            >
-              {link.label}
-            </span>
-          ))}
+          {navLinks.map((link) => {
+            if (link.hash) {
+              return (
+                <span
+                  key={link.label}
+                  className="nav-link"
+                  onClick={() => scrollTo(link.hash)}
+                >
+                  {link.label}
+                </span>
+              );
+            }
+            return (
+              <Link
+                key={link.path}
+                href={link.path}
+                className={`nav-link ${pathname.startsWith(link.path) && link.path !== '/' ? "active" : ""}`}
+                onClick={() => setIsMenuOpen(false)}
+                style={{ textDecoration: 'none' }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link
+            href="/discover"
+            className={`nav-link ${pathname.startsWith('/discover') ? "active" : ""}`}
+            onClick={() => setIsMenuOpen(false)}
+            style={{ textDecoration: 'none' }}
+          >
+            Discover
+          </Link>
           <Link
             href="/erp"
             className="nav-link"
