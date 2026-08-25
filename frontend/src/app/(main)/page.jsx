@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../../components/Hero';
+import Hero from '../../components/hero';
 import Expertise from '../../components/Expertise';
 import Process from '../../components/Process';
 import SaasEcosystem from '../../components/SaasEcosystem';
