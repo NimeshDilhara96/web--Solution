@@ -3,6 +3,7 @@ import Hero from '../../components/Hero';
 import Expertise from '../../components/Expertise';
 import Process from '../../components/Process';
 import SaasEcosystem from '../../components/SaasEcosystem';
+import Stats from '../../components/Stats';
 import Testimonials from '../../components/Testimonials';
 import Contact from '../../components/Contact';
 const homeSchema = [
@@ -176,6 +177,7 @@ const Home = () => {
       <Expertise />
       <Process />
       <SaasEcosystem />
+      <Stats />
       <Testimonials />
       <Contact />
     </>
