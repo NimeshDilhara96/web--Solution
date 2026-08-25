@@ -1,33 +1,33 @@
 import React from "react";
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 export const metadata = {
-  title: "About Us | Why Choose MommentX for Your Software Needs",
+  title: "About Us | An Agile Startup Studio | MommentX",
   description:
-    "Learn about MommentX, our mission, our global team, and why you should choose us as your trusted software development partner.",
+    "We are founders building for founders. Learn about MommentX, our mission to help startups launch fast, and our agile development process.",
   keywords: [
     "About MommentX",
-    "Why Choose Us",
-    "Software Development Agency",
-    "Custom Software Team",
-    "Global IT Company",
-    "Hire Developers",
-    "Enterprise Software Partner"
+    "Agile Startup Studio",
+    "MVP Builders",
+    "Founders building for founders",
+    "Fast SaaS Development",
+    "Tech Co-founder Alternative",
+    "Hire Developers"
   ],
   alternates: {
     canonical: "https://mommentx.space/about",
   },
   openGraph: {
-    title: "About MommentX | Your Global Software Partner",
-    description: "Discover why startups and enterprises choose MommentX for reliable, scalable, and innovative software solutions.",
+    title: "About MommentX | Agile Startup Studio",
+    description: "Discover why ambitious founders choose MommentX for fast, scalable MVP development.",
     url: "https://mommentx.space/about",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "About MommentX",
-    description: "Your trusted partner for custom software development.",
+    description: "An agile startup studio building fast, scalable MVPs for founders.",
   },
 };
 

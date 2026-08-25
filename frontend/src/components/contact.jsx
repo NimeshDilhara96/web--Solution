@@ -25,24 +25,28 @@ const Contact = () => {
     }
     setSubmitting(true);
     try {
-      await fetch('https://formsubmit.co/ajax/mommentx@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/mommentx@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           project: formData.project,
           message: formData.message,
-          _subject: 'New Contact — Web Solution',
-          _template: 'table',
         }),
       });
+      
+      if (!res.ok) throw new Error("API Error");
+
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
         setFormData({ name: '', email: '', project: '', message: '' });
       }, 5000);
-    } catch {
+    } catch (err) {
       alert('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);

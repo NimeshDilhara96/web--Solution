@@ -4,65 +4,44 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    emoji: "🌐",
-    title: "High-Performance Web Apps",
-    price: "Starting from $99",
-    desc: "Lightning-fast, SEO-optimised websites and web applications built on modern stacks. From stunning landing pages to complex, data-driven platforms.",
-    tags: ["React", "Next.js", "SEO", "CMS", "Responsive"],
+    emoji: "🚀",
+    title: "MVP Development",
+    price: "Startup Starter: $499+",
+    desc: "We build your Minimum Viable Product fast. Perfect for early-stage founders looking to validate ideas and secure funding without wasting months.",
+    tags: ["React", "Next.js", "Firebase", "Prototyping", "Speed"],
     color: "#eff6ff",
     iconColor: "#2563eb",
   },
   {
     num: "02",
     emoji: "🧱",
-    title: "SaaS & Platform Development",
-    price: "Starting from $499",
-    desc: "End-to-end SaaS products and custom web platforms — from scalable MVPs to enterprise-grade systems that solve real operational challenges globally.",
-    tags: ["MERN Stack", "Node.js", "APIs", "Cloud", "Database Design"],
+    title: "SaaS Platform Engineering",
+    price: "Scale Package: $899+",
+    desc: "End-to-end SaaS products and web platforms designed to handle growth. We handle authentication, payments, databases, and core business logic.",
+    tags: ["Node.js", "Stripe", "PostgreSQL", "Cloud", "Architecture"],
     color: "#f5f3ff",
     iconColor: "#7c3aed",
   },
   {
     num: "03",
-    emoji: "🛍️",
-    title: "E-commerce & Conversion Design",
-    price: "Starting from $399",
-    desc: "High-converting online storefronts with intelligent product management, seamless payment flows, and customer-focused shopping experiences.",
-    tags: ["Online Stores", "Payments", "Inventory", "Orders", "Analytics"],
-    color: "#fff7ed",
-    iconColor: "#ea580c",
-  },
-  {
-    num: "04",
     emoji: "🤖",
-    title: "AI Integration & Automation",
-    price: "Starting from $299",
-    desc: "Practical AI solutions that automate repetitive workflows, enhance customer experiences, and give your business a competitive intelligence edge.",
-    tags: ["AI Integration", "Chatbots", "OpenAI API", "Automation"],
+    title: "AI Prototyping & Integrations",
+    price: "Smart Starter: $299+",
+    desc: "Embed AI into your existing product or build an AI-first startup. From custom OpenAI wrappers to intelligent automation workflows.",
+    tags: ["OpenAI", "Python", "Chatbots", "LLMs", "Automation"],
     color: "#fdf4ff",
     iconColor: "#d946ef",
   },
   {
-    num: "05",
-    emoji: "⚙️",
-    title: "Enterprise ERP & CRM Systems",
-    price: "Custom Quote",
-    desc: "Powerful, fully custom business management systems — ERP, CRM, and workflow automation — designed around your unique enterprise operations.",
-    tags: ["ERP", "CRM", "Automation", "Cloud Systems", "Scalable"],
-    color: "#f0fdf4",
-    iconColor: "#059669",
-  },
-  {
-    num: "06",
-    emoji: "✦",
-    title: "Digital Products & Design Systems",
-    price: "Browse Catalog",
-    desc: "Premium Figma UI kits, Notion templates, and design systems crafted for founders and product teams. Ship polished products, faster.",
-    tags: ["Figma", "Notion", "Design Systems", "Templates", "UI Kits"],
-    color: "#f8fafc",
-    iconColor: "#475569",
-    discoverHref: "/discover",
-  },
+    num: "04",
+    emoji: "⚡",
+    title: "High-Performance Web Apps",
+    price: "Web Starter: $199+",
+    desc: "Lightning-fast, SEO-optimized marketing sites and web applications. Convert visitors into users with premium UI and zero-lag performance.",
+    tags: ["Next.js", "Tailwind", "SEO", "Vercel", "Performance"],
+    color: "#fff7ed",
+    iconColor: "#ea580c",
+  }
 ];
 
 
@@ -72,14 +51,13 @@ const Expertise = () => {
       <div className="section-inner">
         {/* Section header */}
         <div className="section-head">
-          <div className="section-label">Our Expertise</div>
+          <div className="section-label">How We Help</div>
           <h2 className="section-title">
-            Digital Solutions Built for{" "}
-            <span className="gradient-text">Business Growth</span>
+            Productized Services for{" "}
+            <span className="gradient-text">Modern Founders</span>
           </h2>
           <p className="section-desc">
-            We help startups and businesses build scalable software, digital
-            products, and automation solutions that create measurable impact.
+            Transparent pricing. No endless discovery calls. Pick what you need, and we start building your product today.
           </p>
         </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const saasProducts = [
   {
@@ -109,7 +110,7 @@ const SaasEcosystem = () => {
                         />
                       </svg>
                     </a>
-                    <a
+                    <Link
                       className="saas-learn-btn"
                       href={product.internalHref}
                       style={{
@@ -121,7 +122,7 @@ const SaasEcosystem = () => {
                       }}
                     >
                       Learn More →
-                    </a>
+                    </Link>
                   </>
                 )}
               </div>

@@ -1,11 +1,12 @@
+import React from "react";
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-export default function MainLayout({ children }) {
+export default function ContactLayout({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );

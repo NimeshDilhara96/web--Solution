@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import heroImage from "../assets/hero.png";
 
 /* ─── Design tokens (from source HTML) ─── */
@@ -141,11 +142,11 @@ const Hero = () => {
                   margin: "0 0 20px",
                 }}
               >
-                World-Class
+                We Build Fast,
                 <br />
-                Digital Products &amp;
+                Scalable Products
                 <br />
-                Web Solutions.
+                for Founders.
               </h1>
 
               {/* Body */}
@@ -158,7 +159,7 @@ const Hero = () => {
                   margin: "0 0 28px",
                 }}
               >
-                MommentX is a global digital studio crafting premium Figma templates, design systems, SaaS platforms, and custom software. Trusted by founders and teams worldwide to ship faster and look exceptional.
+                MommentX is an agile startup studio. We help founders and SMBs go from idea to launch in weeks, using modern tech like Next.js and AI to build products that scale.
               </p>
 
               {/* Hero CTAs */}
@@ -188,7 +189,7 @@ const Hero = () => {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  Browse Templates
+                  Start Your Project
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2.5 7h9M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -236,20 +237,16 @@ const Hero = () => {
                 alignItems: "center",
               }}
             >
-              <img
-                src={heroImage.src}
+              <Image
+                src={heroImage}
                 alt="MommentX Platform"
+                priority
                 style={{
                   width: "100%",
                   height: "auto",
                   display: "block",
                   objectFit: "contain",
                   maxHeight: "480px",
-                }}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
-                    "https://placehold.co/600x600/e4e0fd/4234b8?text=Place+hero-graphic.png\\nin+public+folder";
                 }}
               />
             </div>

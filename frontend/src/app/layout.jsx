@@ -4,36 +4,24 @@ import React from 'react';
 export const metadata = {
   metadataBase: new URL('https://mommentx.space'),
   title: {
-    default: "MommentX | Global Custom Software & Web Development Company",
+    default: "MommentX | Agile Startup Studio & MVP Development",
     template: "%s | MommentX"
   },
-  description: "MommentX is a top-tier software development agency delivering scalable web applications, enterprise ERP solutions, AI-driven platforms, and premium digital products for businesses worldwide.",
+  description: "MommentX is an agile startup studio that builds scalable MVPs, AI solutions, and SaaS platforms. We help founders go from idea to launch in weeks.",
   keywords: [
-    // Core services
-    "Custom Software Development",
+    "Startup Studio",
+    "MVP Development",
+    "SaaS Platform Development",
+    "AI Prototyping",
+    "Next.js Development Agency",
+    "React Development",
+    "Founders",
+    "Product Studio",
+    "Agile Development",
     "Web Application Development",
-    "Enterprise ERP Solutions",
-    "AI Software Solutions",
-    "Global Software Agency",
-    "SaaS Development",
-    "Business Automation",
-    "Hire Dedicated Developers",
-    // Digital products (new)
+    "Tech Co-founder Alternative",
     "Figma UI Kit",
-    "Notion Templates",
-    "SaaS Dashboard Template",
-    "Next.js Starter Kit",
-    "Design System",
-    "Digital Products",
-    "UI Kit Download",
-    // International targeting
-    "Software Development Company",
-    "Custom Web Development Agency",
-    "Offshore Software Development",
-    "Remote Software Team",
-    "Full Stack Development Agency",
-    "React Next.js Developer",
-    "Software Outsourcing",
+    "Notion Templates"
   ],
   authors: [{ name: "MommentX", url: "https://mommentx.space" }],
   creator: "MommentX",
@@ -53,8 +41,8 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "MommentX | Global Custom Software & Web Development",
-    description: "World-class custom software, SaaS platforms, AI solutions, enterprise ERPs, and premium digital products — built for global businesses by MommentX.",
+    title: "MommentX | Agile Startup Studio",
+    description: "Fast MVP development, SaaS platforms, and AI integrations built for ambitious founders.",
     url: "https://mommentx.space",
     siteName: "MommentX",
     images: [
@@ -62,7 +50,7 @@ export const metadata = {
         url: "/mx/web-app-manifest-512x512.png",
         width: 1200,
         height: 630,
-        alt: "MommentX — Global Custom Software & Digital Products Studio",
+        alt: "MommentX — Agile Startup Studio",
         type: "image/png",
       }
     ],
@@ -71,8 +59,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MommentX | World-Class Software & Digital Products",
-    description: "Custom software, SaaS platforms, AI solutions, and premium Figma/Notion templates — built for global teams by MommentX.",
+    title: "MommentX | Agile Startup Studio",
+    description: "Fast MVP development, SaaS platforms, and AI integrations built for ambitious founders.",
     images: ["/mx/web-app-manifest-512x512.png"],
     creator: "@mommentx",
     site: "@mommentx",

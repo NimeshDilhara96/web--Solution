@@ -1,5 +1,13 @@
 import React from 'react';
 
+export const metadata = {
+  title: "Privacy Policy | MommentX",
+  description: "Privacy Policy for MommentX. Learn how we collect, use, and protect your data.",
+  alternates: {
+    canonical: "https://mommentx.space/privacy-policy",
+  },
+};
+
 const PrivacyPolicy = () => {
 
   return (

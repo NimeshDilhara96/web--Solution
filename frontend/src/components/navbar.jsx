@@ -12,6 +12,17 @@ const Navbar = () => {
   const router = useRouter();
 
   useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
       const sections = ["home", "expertise", "saas", "why-us", "contact"];
@@ -54,9 +65,18 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Services", path: "/", hash: "expertise" },
-    { label: "About Us", path: "/about" },
+    { label: "Services", path: "/services" },
+    { 
+      label: "Products", 
+      type: "dropdown",
+      items: [
+        { label: "OrderFlow ERP ↗", path: "https://www.mommentx.space/erp", external: true }
+      ]
+    },
+    { label: "Portfolio", path: "/portfolio" },
     { label: "Technologies", path: "/technologies" },
+    { label: "Discover", path: "/discover" },
+    { label: "About Us", path: "/about" },
   ];
 
   return (
@@ -97,6 +117,26 @@ const Navbar = () => {
         {/* Desktop links */}
         <div className="nav-links">
           {navLinks.map((link) => {
+            if (link.type === "dropdown") {
+              return (
+                <div key={link.label} className="nav-dropdown" style={{ position: 'relative' }}>
+                  <span className="nav-link">{link.label} ▾</span>
+                  <div className="nav-dropdown-menu">
+                    {link.items.map(item => (
+                      <a 
+                        key={item.label}
+                        href={item.path} 
+                        target={item.external ? "_blank" : "_self"} 
+                        rel={item.external ? "noopener noreferrer" : ""} 
+                        className="nav-dropdown-item"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
             if (link.hash) {
               return (
                 <span
@@ -121,27 +161,12 @@ const Navbar = () => {
             );
           })}
           <Link
-            href="/discover"
-            className={`nav-link ${pathname.startsWith('/discover') ? "active" : ""}`}
-            onClick={() => setIsMenuOpen(false)}
-            style={{ textDecoration: 'none' }}
-          >
-            Discover
-          </Link>
-          <Link
-            href="/erp"
-            className={`nav-link ${pathname === '/erp' ? "active" : ""}`}
-            onClick={() => setIsMenuOpen(false)}
-            style={{ textDecoration: 'none' }}
-          >
-            ERP
-          </Link>
-          <button
+            href="/contact"
             className="btn btn-primary btn-sm"
-            onClick={() => scrollTo("contact")}
+            style={{ textDecoration: 'none', display: 'inline-block', lineHeight: 'normal' }}
           >
             Start a Project
-          </button>
+          </Link>
         </div>
 
         {/* Hamburger */}
@@ -160,6 +185,21 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           {navLinks.map((link) => {
+            if (link.type === "dropdown") {
+              return link.items.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.path}
+                  target={item.external ? "_blank" : "_self"}
+                  rel={item.external ? "noopener noreferrer" : ""}
+                  className="nav-link"
+                  style={{ textDecoration: 'none', paddingLeft: '16px' }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label} / {item.label}
+                </a>
+              ));
+            }
             if (link.hash) {
               return (
                 <span
@@ -184,27 +224,13 @@ const Navbar = () => {
             );
           })}
           <Link
-            href="/discover"
-            className={`nav-link ${pathname.startsWith('/discover') ? "active" : ""}`}
-            onClick={() => setIsMenuOpen(false)}
-            style={{ textDecoration: 'none' }}
-          >
-            Discover
-          </Link>
-          <Link
-            href="/erp"
-            className="nav-link"
-            onClick={() => setIsMenuOpen(false)}
-            style={{ textDecoration: 'none' }}
-          >
-            ERP
-          </Link>
-          <button
+            href="/contact"
             className="btn btn-primary"
-            onClick={() => scrollTo("contact")}
+            style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}
+            onClick={() => setIsMenuOpen(false)}
           >
             Start a Project
-          </button>
+          </Link>
         </div>
       )}
     </nav>

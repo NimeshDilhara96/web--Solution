@@ -3,35 +3,30 @@ import React from "react";
 import Link from "next/link";
 
 const Footer = () => {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   const columns = [
     {
       label: "Services",
       links: [
-        { text: "Web Applications", id: "expertise" },
-        { text: "AI & Automation", id: "expertise" },
-        { text: "ERP Systems", id: "expertise" },
-        { text: "E-commerce", id: "expertise" },
+        { text: "MVP Development", path: "/services" },
+        { text: "SaaS Platforms", path: "/services" },
+        { text: "AI Prototyping", path: "/services" },
+        { text: "Web Applications", path: "/services" },
       ],
     },
     {
-      label: "Products",
+      label: "Portfolio",
       links: [
-        { text: "OrderFlow ERP", id: "saas" },
-        { text: "HRM System", id: "why-us" },
-        { text: "NutriCare AI", id: "why-us" },
+        { text: "OrderFlow Engine", path: "/portfolio" },
+        { text: "HR Connect MVP", path: "/portfolio" },
+        { text: "NutriCare AI", path: "/portfolio" },
       ],
     },
     {
       label: "Company",
       links: [
-        { text: "Services", id: "expertise" },
-        { text: "Case Studies", id: "why-us" },
-        { text: "Contact", id: "contact" },
+        { text: "About Us", path: "/about" },
+        { text: "Discover", path: "/discover" },
+        { text: "Contact", path: "/contact" },
       ],
     },
   ];
@@ -104,14 +99,14 @@ const Footer = () => {
             <div key={col.label}>
               <div className="footer-col-label">{col.label}</div>
               {col.links.map((link) => (
-                <a
+                <Link
                   key={link.text}
+                  href={link.path}
                   className="footer-link"
-                  onClick={() => scrollTo(link.id)}
-                  style={{ cursor: "pointer" }}
+                  style={{ textDecoration: 'none' }}
                 >
                   {link.text}
-                </a>
+                </Link>
               ))}
             </div>
           ))}

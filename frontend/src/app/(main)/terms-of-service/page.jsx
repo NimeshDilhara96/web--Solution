@@ -1,5 +1,13 @@
 import React from 'react';
 
+export const metadata = {
+  title: "Terms of Service | MommentX",
+  description: "Terms of Service for MommentX. Please read these terms carefully before using our services.",
+  alternates: {
+    canonical: "https://mommentx.space/terms-of-service",
+  },
+};
+
 const TermsOfService = () => {
 
   return (

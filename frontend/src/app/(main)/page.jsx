@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from '../../components/hero';
+import Hero from '../../components/Hero';
 import Expertise from '../../components/Expertise';
+import Process from '../../components/Process';
 import SaasEcosystem from '../../components/SaasEcosystem';
-import WhyUs from '../../components/WhyUs';
-import Contact from '../../components/contact';
-
+import Testimonials from '../../components/Testimonials';
+import Contact from '../../components/Contact';
 const homeSchema = [
   // ── Organization ──────────────────────────────
   {
@@ -20,10 +20,10 @@ const homeSchema = [
       "width": 96,
       "height": 96
     },
-    "description": "MommentX is a global custom software development studio specializing in scalable web applications, AI software solutions, enterprise ERP systems, SaaS platforms, and premium digital products for businesses worldwide.",
+    "description": "MommentX is an agile startup studio specializing in scalable MVP development, AI integrations, SaaS platforms, and digital product design for ambitious founders worldwide.",
     "foundingDate": "2023",
     "numberOfEmployees": { "@type": "QuantitativeValue", "value": "1-10" },
-    "slogan": "World-Class Digital Products & Web Solutions",
+    "slogan": "We Build Fast, Scalable Products for Founders",
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -45,14 +45,10 @@ const homeSchema = [
       "name": "Worldwide"
     },
     "knowsAbout": [
-      "Custom Software Development",
-      "Web Application Development",
-      "SaaS Platform Development",
-      "Enterprise ERP Systems",
-      "AI Integration",
-      "UI/UX Design",
-      "Figma UI Kits",
-      "Notion Templates",
+      "MVP Development",
+      "SaaS Platform Engineering",
+      "Startup Studio",
+      "AI Prototyping",
       "Next.js Development",
       "React Development"
     ],
@@ -68,7 +64,7 @@ const homeSchema = [
     "@id": "https://mommentx.space/#service",
     "name": "MommentX Software Development Services",
     "url": "https://mommentx.space",
-    "description": "End-to-end custom software development, SaaS platforms, AI integration, ERP systems, and digital product design for global businesses.",
+    "description": "Fast MVP development, SaaS platforms, AI integrations, and digital product design for ambitious startup founders.",
     "provider": { "@id": "https://mommentx.space/#organization" },
     "areaServed": "Worldwide",
     "hasOfferCatalog": {
@@ -155,14 +151,14 @@ const homeSchema = [
 ];
 
 export const metadata = {
-  title: "Top Custom Software Development Agency | MommentX",
-  description: "MommentX builds world-class custom software, SaaS platforms, AI solutions, and enterprise ERP systems for global businesses. Browse premium Figma UI kits & Notion templates on our Discover page.",
+  title: "MommentX | Agile Startup Studio & MVP Development",
+  description: "MommentX is a startup studio that builds scalable MVPs, SaaS platforms, and AI solutions fast. We help founders go from idea to launch in weeks.",
   alternates: {
     canonical: "https://mommentx.space",
   },
   openGraph: {
-    title: "MommentX — World-Class Custom Software & Digital Products",
-    description: "Custom software, SaaS platforms, AI integration, enterprise ERP, and premium digital templates — built for international clients by MommentX.",
+    title: "MommentX — Agile Startup Studio",
+    description: "Fast MVP development, SaaS engineering, and AI prototyping built for founders, by founders.",
     url: "https://mommentx.space",
     type: "website",
   },
@@ -178,8 +174,9 @@ const Home = () => {
       />
       <Hero />
       <Expertise />
+      <Process />
       <SaasEcosystem />
-      <WhyUs />
+      <Testimonials />
       <Contact />
     </>
   );

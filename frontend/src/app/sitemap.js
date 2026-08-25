@@ -18,6 +18,18 @@ export default function sitemap() {
       priority: 1,
     },
     {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/portfolio`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/discover`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -35,13 +47,13 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    ...productUrls,
     {
-      url: `${baseUrl}/erp`,
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
+    ...productUrls,
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
