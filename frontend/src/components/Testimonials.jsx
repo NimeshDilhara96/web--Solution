@@ -67,7 +67,7 @@ const Testimonials = () => {
                 marginBottom: '24px',
                 fontStyle: 'italic'
               }}>
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
               <div>
                 <div style={{ fontWeight: 700, color: '#0a0d14', fontSize: '16px' }}>{testimonial.name}</div>

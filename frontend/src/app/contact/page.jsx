@@ -1,5 +1,5 @@
 import React from 'react';
-import Contact from '../../components/Contact';
+import Contact from '../../components/contact';
 
 export const metadata = {
   title: "Contact Us | Start Your Project | MommentX",

@@ -5,7 +5,7 @@ import Process from '../../components/Process';
 import SaasEcosystem from '../../components/SaasEcosystem';
 import Stats from '../../components/Stats';
 import Testimonials from '../../components/Testimonials';
-import Contact from '../../components/Contact';
+import Contact from '../../components/contact';
 const homeSchema = [
   // ── Organization ──────────────────────────────
   {
