@@ -3,15 +3,15 @@
   "short_name": "MX",
   "icons": [
     {
-      "src": "/mx/web-app-manifest-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "/mommentx-logo-transparent.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "maskable"
     },
     {
-      "src": "/mx/web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
+      "src": "/mommentx-logo-transparent.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
       "purpose": "maskable"
     }
   ],
