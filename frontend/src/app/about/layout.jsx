@@ -45,7 +45,7 @@ export default function AboutLayout({ children }) {
       "@type": "Organization",
       name: "MommentX",
       url: "https://mommentx.space",
-      logo: "https://mommentx.space/mommentx-logo-transparent.svg",
+      logo: "https://mommentx.space/web-app-manifest-512x512.png",
     },
   };
 

@@ -53,11 +53,11 @@ export const metadata = {
     siteName: "MommentX",
     images: [
       {
-        url: "/mommentx-logo-transparent.svg",
-        width: 580,
-        height: 572,
+        url: "/web-app-manifest-512x512.png",
+        width: 512,
+        height: 512,
         alt: "MommentX — Agile Startup Studio",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
     locale: "en_US",
@@ -68,14 +68,19 @@ export const metadata = {
     title: "MommentX | Agile Startup Studio",
     description:
       "Fast MVP development, SaaS platforms, and AI integrations built for ambitious founders.",
-    images: ["/mommentx-logo-transparent.svg"],
+    images: ["/web-app-manifest-512x512.png"],
     creator: "@mommentx",
     site: "@mommentx",
   },
   icons: {
-    icon: [{ url: "/mommentx-logo-transparent.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/mommentx-logo-transparent.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon0.svg", type: "image/svg+xml" },
+      { url: "/icon1.png", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
   },
+  manifest: "/manifest.json",
   category: "technology",
 };
 

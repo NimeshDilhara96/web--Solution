@@ -45,7 +45,7 @@ export default function TechnologiesLayout({ children }) {
     publisher: {
       "@type": "Organization",
       name: "MommentX",
-      logo: "https://mommentx.space/mommentx-logo-transparent.svg",
+      logo: "https://mommentx.space/web-app-manifest-512x512.png",
     },
   };
 
