@@ -5,7 +5,7 @@ import React from "react";
 export const metadata = {
   metadataBase: new URL("https://mommentx.space"),
   title: {
-    default: "MommentX | Agile Startup Studio & MVP Development",
+    default: "MommentX | Startup Studio",
     template: "%s | MommentX",
   },
   description:
@@ -53,7 +53,7 @@ export const metadata = {
     siteName: "MommentX",
     images: [
       {
-        url: "/web-app-manifest-512x512.png",
+        url: "https://mommentx.space/web-app-manifest-512x512.png",
         width: 512,
         height: 512,
         alt: "MommentX — Agile Startup Studio",
@@ -68,7 +68,7 @@ export const metadata = {
     title: "MommentX | Agile Startup Studio",
     description:
       "Fast MVP development, SaaS platforms, and AI integrations built for ambitious founders.",
-    images: ["/web-app-manifest-512x512.png"],
+    images: ["https://mommentx.space/web-app-manifest-512x512.png"],
     creator: "@mommentx",
     site: "@mommentx",
   },
